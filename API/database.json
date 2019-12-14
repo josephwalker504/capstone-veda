@@ -1,0 +1,130 @@
+{
+  "user": [
+    {
+      "id": 1,
+      "email": "jojo@walker.com",
+      "password": "1234"
+    },
+    {
+      "id": 2,
+      "email": "ZKJ@walker.com",
+      "password": "4321"
+    }
+  ],
+  "meal": [
+    {
+      "id": 1,
+      "FoodType": "Chicken Nuggets",
+      "FoodPortion": "4pc",
+      "Comment": "Zoié wanted Wendy's",
+      "timeStamp": "12.12.19",
+      "userId": 1
+    },
+    {
+      "id": 2,
+      "FoodType": "Cookies",
+      "FoodPortion": "small Famous Amos bag",
+      "Comment": "Kloé's snack for the day",
+      "timeStamp": "12.12.19",
+      "userId": 2
+    },
+    {
+      "FoodType": "cxc",
+      "FoodPortion": "xczc",
+      "Comment": "cccc",
+      "timeStamp": "2019-12-13T21:33:27.726Z",
+      "id": 3
+    },
+    {
+      "FoodType": "cxc",
+      "FoodPortion": "xczc",
+      "Comment": "kkk",
+      "timeStamp": "2019-12-14T17:16:22.428Z",
+      "id": 4
+    },
+    {
+      "FoodType": "kokm",
+      "FoodPortion": "hfjeoo",
+      "Comment": "fjgkr",
+      "timeStamp": "2019-12-14T17:20:21.431Z",
+      "id": 5
+    },
+    {
+      "FoodType": "cxc",
+      "FoodPortion": "xczc",
+      "Comment": "tpewrg",
+      "timeStamp": "2019-12-14T17:20:45.923Z",
+      "id": 6
+    }
+  ],
+  "child": [
+    {
+      "id": 1,
+      "name": "Zoié",
+      "birthdate": "12.21.16",
+      "gender": "female",
+      "userId": 1
+    },
+    {
+      "id": 2,
+      "name": "Kloé",
+      "birthdate": "04.25.18",
+      "gender": "female",
+      "userId": 2
+    }
+  ],
+  "potty": [
+    {
+      "id": 1,
+      "action 1": true,
+      "action 2": false,
+      "comment": "Just a wet diaper",
+      "timeStamp": "12.12.19",
+      "chidId": 2,
+      "userId": 1
+    },
+    {
+      "id": 2,
+      "action 1": false,
+      "action 2": true,
+      "comment": "Zoié used the bigGirl potty",
+      "timeStamp": "12.12.19",
+      "chidId": 1,
+      "userId": 2
+    }
+  ],
+  "sleep": [
+    {
+      "id": 1,
+      "childId": 1,
+      "comment": "Nap time",
+      "timeStamp": "12.12.19",
+      "userId": 1
+    },
+    {
+      "id": 2,
+      "childId": 2,
+      "comment": "Nite Nite",
+      "timeStamp": "12.12.19",
+      "userId": 2
+    }
+  ],
+  "story": [
+    {
+      "id": 1,
+      "childId": 2,
+      "timeStamp": "12.12.19",
+      "title": "Good Night Everyone",
+      "comment": "Kloé acted a fool tore the last few pages of the book. Keeps saying goodNight",
+      "userId": 1
+    },
+    {
+      "id": 2,
+      "childId": 1,
+      "timeStamp": "12.12.19",
+      "title": "Princess and Frog",
+      "comment": "That's my bestie my bestie my bestfriend",
+      "userId": 2
+    }
+  ]
+}
