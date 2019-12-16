@@ -20,6 +20,17 @@ class MealList extends Component {
             })
         })
     }
+    deleteMeal= id => {
+        MealManager.delete(id)
+        .then(() => {
+            MealManager.getAll()
+            .then((makeNewMeal) => {
+                this.setState({
+                    meal: makeNewMeal
+                })
+            })
+        })
+    }
 
     render() {
         return(
@@ -36,6 +47,7 @@ class MealList extends Component {
                     <MealSection
                     key={meal.id} 
                     meal={meal}
+                    deleteMeal={this.deleteMeal}
                     {...this.props}  
                     />
                 )}

@@ -6,7 +6,14 @@ export default {
     },
     getAll() {
         return fetch(`${baseUrl}/meal`).then(result => result.json())
-    }, 
+    },
+    
+    delete(id) {
+        return fetch(`${baseUrl}/meals/${id}`, {
+          method: "DELETE"
+        })
+          .then(result => result.json())
+      },
      post(makeNewMeal) {
         return fetch(`${baseUrl}/meal`, {
           method: "POST",

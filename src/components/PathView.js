@@ -4,6 +4,7 @@ import Login from "./Auth/LogIn"
 import Reg from './Auth/Reg';
 import MealForm from './Meal/MealForm';
 import MealEditForm from './Meal/MealEditForm';
+import MealList from './Meal/MealList';
 
 
 
@@ -24,6 +25,13 @@ export default class PathView extends Component {
                     return <Reg setUser={this.props.setUser} {...props} />
                     }}
                 />
+                <Route exact path="/meals" render={props => {
+          if (this.isAuthenticated()) {
+            return <MealList {...props} />
+          } else {
+            return <Redirect to="/" />
+          }
+        }} />
 
                 <Route
                     path="/meal" render={props => {
@@ -32,7 +40,7 @@ export default class PathView extends Component {
                  />
 
                 <Route
-                    path="/meals/:mealId(\d+)/edit" render={props => {
+                    path="/meals/:meal(\d+)/edit" render={props => {
                     return <MealEditForm {...props} />
                     }}
                 />

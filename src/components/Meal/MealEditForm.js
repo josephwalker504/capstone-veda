@@ -29,7 +29,7 @@ class MealEditForm extends Component {
             timeStamp: this.state.timeStamp
         };
         MealManager.update(editMeal)
-            .then(() => this.props.history.push("/meal"))
+            .then(() => this.props.history.push("/meals"))
     }
 
         componentDidMount() {
@@ -47,32 +47,36 @@ class MealEditForm extends Component {
 
     render() {
         return(
-            <div className="card">
-                <div className="card-content">
-                    <section>
-                        <label className="meal-type">Food Type</label>
-                        <input type="text" onChange={this.handleFieldChange} id="FoodType"></input>
-                        {/* ID's must match state: keys */}
-                    </section>
+            <form>
+                <fieldset>
+                <div className="card">
+                    <div className="card-content">
+                        <section>
+                            <label className="meal-type">Food Type</label>
+                            <input type="text" onChange={this.handleFieldChange} id="FoodType"></input>
+                            {/* ID's must match state: keys */}
+                        </section>
 
-                    <section>
-                        <label className="meal-portion">Food Portion</label>
-                        <input type="text"onChange={this.handleFieldChange} id="FoodPortion"></input>
-                    </section>
+                        <section>
+                            <label className="meal-portion">Food Portion</label>
+                            <input type="text"onChange={this.handleFieldChange} id="FoodPortion"></input>
+                        </section>
 
-                    <section>
-                        <label className="meal-comment">Comment</label>
-                        <textarea type="text" onChange={this.handleFieldChange} id="Comment" rows="2"></textarea>
-                    </section>
+                        <section>
+                            <label className="meal-comment">Comment</label>
+                            <textarea type="text" onChange={this.handleFieldChange} id="Comment" rows="2"></textarea>
+                        </section>
 
-                    <div className="meal-btn" id="meal-btn">
-                        <button type="button" onClick={this.makeNewMeal} className="meal-button">ENTER</button>
-                        <button type="button" onClick={this.makeNewMeal} className="meal-button">DELETE</button>
+                        <div className="meal-btn" id="meal-btn">
+                            <button type="button" onClick={this.editMeall} className="meal-button">ENTER</button>
+                            <button type="button" onClick={this.deleteMeall} className="meal-button">DELETE</button>
+                        </div>
+
                     </div>
 
                 </div>
-
-            </div>
+             </fieldset>
+            </form>
 
         )
     }
