@@ -40,10 +40,7 @@ class MealForm extends Component {
     };
 
 
-    componentDidMount(){
-        MealManager.getAll()
-        .then(meal => this.setState({meal: meal}))
-    }
+
 
     render() {
         return(

@@ -2,10 +2,10 @@ const baseUrl = "http://localhost:5002"
 
 export default {
     get(id) {
-        return fetch(`${baseUrl}/meal/${id}`).then(result => result.json())
+      return fetch(`${baseUrl}/meals/${id}`).then(result => result.json())
     },
     getAll() {
-        return fetch(`${baseUrl}/meal`).then(result => result.json())
+        return fetch(`${baseUrl}/meals`).then(result => result.json())
     },
     
     delete(id) {
@@ -15,7 +15,7 @@ export default {
           .then(result => result.json())
       },
      post(makeNewMeal) {
-        return fetch(`${baseUrl}/meal`, {
+        return fetch(`${baseUrl}/meals`, {
           method: "POST",
           headers: {
             "Content-Type": "application/json"
@@ -24,12 +24,13 @@ export default {
         }).then(data => data.json())
       },
       update(editMeal) {
-        return fetch(`${baseUrl}/meal/${editMeal.id}`, {
+        return fetch(`${baseUrl}/meals/${editMeal.id}`, {
           method: "PUT",
           headers: {
-            "Content-Type": "application/json"
+            "Content-Type": "application/json",
+            "Accept": "application/json"
           },
-          body: JSON.stringify( editMeal)
+          body: JSON.stringify(editMeal)
         }).then(data => data.json())
       }
 
