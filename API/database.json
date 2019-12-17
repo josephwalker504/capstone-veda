@@ -11,50 +11,20 @@
       "password": "4321"
     }
   ],
-  "meal": [
+  "meals": [
     {
       "id": 1,
-      "FoodType": "Chicken Nuggets",
+      "FoodType": "Chicken",
       "FoodPortion": "4pc",
-      "Comment": "Zoié wanted Wendy's",
-      "timeStamp": "12.12.19",
-      "userId": 1
+      "Comment": "Zoié wanted Wendy's for breakfast",
+      "timeStamp": "2019-12-16T21:50:50.191Z"
     },
     {
       "id": 2,
       "FoodType": "Cookies",
       "FoodPortion": "small Famous Amos bag",
       "Comment": "Kloé's snack for the day",
-      "timeStamp": "12.12.19",
-      "userId": 2
-    },
-    {
-      "FoodType": "cxc",
-      "FoodPortion": "xczc",
-      "Comment": "cccc",
-      "timeStamp": "2019-12-13T21:33:27.726Z",
-      "id": 3
-    },
-    {
-      "FoodType": "cxc",
-      "FoodPortion": "xczc",
-      "Comment": "kkk",
-      "timeStamp": "2019-12-14T17:16:22.428Z",
-      "id": 4
-    },
-    {
-      "FoodType": "kokm",
-      "FoodPortion": "hfjeoo",
-      "Comment": "fjgkr",
-      "timeStamp": "2019-12-14T17:20:21.431Z",
-      "id": 5
-    },
-    {
-      "FoodType": "cxc",
-      "FoodPortion": "xczc",
-      "Comment": "tpewrg",
-      "timeStamp": "2019-12-14T17:20:45.923Z",
-      "id": 6
+      "timeStamp": "2019-12-16T21:52:42.155Z"
     }
   ],
   "child": [

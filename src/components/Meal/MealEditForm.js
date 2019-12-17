@@ -1,81 +1,119 @@
-import React, { Component } from 'react';
-import MealManager from '../../Modules/MealManager';
-
+import React, { Component } from "react";
+import MealManager from "../../Modules/MealManager";
 
 class MealEditForm extends Component {
+  state = {
+    FoodType: "",
+    FoodPortion: "",
+    Comment: "",
+    timeStamp: "",
+    loadingStatus: true
+  };
 
-    state = {
-        meal: [],
-        FoodType: "",
-        FoodPortion: "",
-        Comment: "",
-        timeStamp: "",
+  handleFieldChange = evt => {
+    const stateToChange = {};
+    stateToChange[evt.target.id] = evt.target.value;
+    this.setState(stateToChange);
+  };
+
+  editMeal = evt => {
+    evt.preventDefault();
+    this.setState({ loadingStatus: true });
+    const editMeal = {
+      id: this.props.match.params.mealId,
+      FoodType: this.state.FoodType,
+      FoodPortion: this.state.FoodPortion,
+      Comment: this.state.Comment,
+      timeStamp: this.state.timeStamp
+    };
+    MealManager.update(editMeal).then(() => this.props.history.push("/meals"));
+  };
+
+  componentDidMount() {
+    MealManager.get(this.props.match.params.mealId).then(meal => {
+      console.log("meal", meal);
+      this.setState({
+        FoodType: meal.FoodType,
+        FoodPortion: meal.FoodPortion,
+        Comment: meal.Comment,
+        timeStamp: new Date(),
         loadingStatus: false
-    };
+      });
+    });
+  }
 
-    handleFieldChange = evt => {
-        const stateToChange = {};
-        stateToChange[evt.target.id] = evt.target.value;
-        this.setState(stateToChange);
-    };
-
-    editMeal = evt => {
-        evt.preventDefault();
-        this.setState({ loadingStatus: true});
-        const editMeal = {
-            FoodType: this.props.match.params.meal,
-            FoodPortion: this.state.FoodPortion,
-            Comment: this.state.Comment,
-            timeStamp: this.state.timeStamp
-        };
-        MealManager.update(editMeal)
-            .then(() => this.props.history.push("/meal"))
-    }
-
-        componentDidMount() {
-            MealManager.get(this.props.match.params.meal)
-            .then(meal => {
-              this.setState({
-               FoodType: meal.FoodType,
-               FoodPortion: meal.FoodPortion,
-               Comment: meal.Comment,
-               timeStamp: new Date(),
-              });
-            });
-        }
-    
-
-    render() {
-        return(
-            <div className="card">
-                <div className="card-content">
-                    <section>
-                        <label className="meal-type">Food Type</label>
-                        <input type="text" onChange={this.handleFieldChange} id="FoodType"></input>
-                        {/* ID's must match state: keys */}
-                    </section>
-
-                    <section>
-                        <label className="meal-portion">Food Portion</label>
-                        <input type="text"onChange={this.handleFieldChange} id="FoodPortion"></input>
-                    </section>
-
-                    <section>
-                        <label className="meal-comment">Comment</label>
-                        <textarea type="text" onChange={this.handleFieldChange} id="Comment" rows="2"></textarea>
-                    </section>
-
-                    <div className="meal-btn" id="meal-btn">
-                        <button type="button" onClick={this.makeNewMeal} className="meal-button">ENTER</button>
-                        <button type="button" onClick={this.makeNewMeal} className="meal-button">DELETE</button>
-                    </div>
-
-                </div>
-
-            </div>
-
-        )
-    }
+  deleteMeal = id => {
+    MealManager.delete(id)
+    .then(() => {
+        MealManager.getAll()
+        .then((makeNewMeal) => {
+            this.setState({
+                meals: makeNewMeal
+            })
+        })
+    })
 }
 
-export default MealEditForm
+  render() {
+    console.log("this.state", this.state);
+    return (
+      <form>
+        <fieldset>
+          <div className="card">
+            <div className="card-content">
+              <section>
+                <label className="meal-type">Food Type</label>
+                <input
+                  type="text"
+                  onChange={this.handleFieldChange}
+                  id="FoodType"
+                  value={this.state.FoodType}
+                ></input>
+                {/* ID's must match state: keys */}
+              </section>
+
+              <section>
+                <label className="meal-portion">Food Portion</label>
+                <input
+                  type="text"
+                  onChange={this.handleFieldChange}
+                  id="FoodPortion"
+                  value={this.state.FoodPortion}
+                ></input>
+              </section>
+
+              <section>
+                <label className="meal-comment">Comment</label>
+                <textarea
+                  type="text"
+                  onChange={this.handleFieldChange}
+                  value={this.state.Comment}
+                  id="Comment"
+                  rows="2"
+                ></textarea>
+              </section>
+
+              <div className="meal-btn" id="meal-btn">
+                <button
+                  type="button"
+                  onClick={this.editMeal}
+                  className="meal-button"
+                >
+                  ENTER
+                </button>
+                {/* <button
+                  type="button"
+                  onClick={() => this.props.deleteMeal(this.props.meal.id)}
+                >
+                  Delete
+                </button> */}
+              </div>
+            </div>
+          </div>
+        </fieldset>
+      </form>
+    );
+  }
+}
+
+export default MealEditForm;
