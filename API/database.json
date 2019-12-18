@@ -1,5 +1,5 @@
 {
-  "user": [
+  "users": [
     {
       "id": 1,
       "email": "jojo@walker.com",
@@ -17,24 +17,30 @@
       "FoodType": "Chicken",
       "FoodPortion": "4pc",
       "Comment": "Zoié wanted Wendy's for breakfast",
-      "timeStamp": "2019-12-16T21:50:50.191Z"
+      "timeStamp": "2019-12-16T21:50:50.191Z",
+      "userId": 1,
+      "childId": 1
     },
     {
       "id": 2,
       "FoodType": "Cookies",
       "FoodPortion": "small Famous Amos bag",
       "Comment": "Kloé's snack for the day",
-      "timeStamp": "2019-12-16T21:52:42.155Z"
+      "timeStamp": "2019-12-16T21:52:42.155Z",
+      "userId": 1,
+      "childId": 1
     },
     {
       "FoodType": "Pizza",
       "FoodPortion": "1/2 slice",
       "Comment": "Zoié really didn't want the pizza, just was just being greedy",
       "timeStamp": "2019-12-17T00:30:52.849Z",
-      "id": 4
+      "id": 4,
+      "userId": 1,
+      "childId": 1
     }
   ],
-  "child": [
+  "children": [
     {
       "id": 1,
       "name": "Zoié",
