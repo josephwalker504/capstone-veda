@@ -36,7 +36,7 @@ class MealForm extends Component {
     
     makeNewMeal = evt => {
         evt.preventDefault();
-        if(this.state.FoodType === "" || this.state.FoodPortion === "" || this.state.Comment === "" || this.state.userId) {
+        if(this.state.FoodType === "" || this.state.FoodPortion === "" || this.state.Comment === "") {
             window.alert("All Fields Required");
         } else {
             const storedId = localStorage.getItem("currentUser");
@@ -47,7 +47,8 @@ class MealForm extends Component {
                 FoodPortion: this.state.FoodPortion,
                 Comment: this.state.Comment,
                 timeStamp: new Date(),
-                userId: storedId
+                userId: parseInt(storedId),
+                childId: parseInt(this.state.childId)
                 
             };
             MealManager.post(meal)
@@ -67,7 +68,14 @@ class MealForm extends Component {
                 <div className="card-content">
                     <section>
                         <label className="select-child">Select Child</label>
-                        <select onChange={this.handleFieldChange} id="childId"></select>
+                        <select onChange={this.handleFieldChange} id="childId" value={this.state.childId}>
+                            <option>Select Child</option>
+                            {this.state.children.map(children =>
+                                <option key={children.id} value={children.id}>
+                                    {children.name}
+                                </option>
+                                )}
+                        </select>
 
                     </section>
                     <section>
