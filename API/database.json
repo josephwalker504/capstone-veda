@@ -18,7 +18,7 @@
       "FoodPortion": "4pc",
       "Comment": "Zoié wanted Wendy's for breakfast",
       "timeStamp": "2019-12-16T21:50:50.191Z",
-      "userId": 1,
+      "userId": 2,
       "childId": 1
     },
     {
@@ -36,7 +36,7 @@
       "Comment": "Zoié really didn't want the pizza, just was just being greedy",
       "timeStamp": "2019-12-17T00:30:52.849Z",
       "id": 4,
-      "userId": 1,
+      "userId": 2,
       "childId": 1
     }
   ],

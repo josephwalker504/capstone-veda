@@ -32,6 +32,9 @@ export default {
           },
           body: JSON.stringify(editMeal)
         }).then(data => data.json())
+      },
+      childMeal(id) {
+        return fetch(`${baseUrl}/children?userId=${id}`).then(result => result.json())
       }
 
     }

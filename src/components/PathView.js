@@ -10,7 +10,10 @@ import PottyEditForm from "./Potty/PottyEditForm";
 
 
 export default class PathView extends Component {
-  isAuthenticated = () => localStorage.getItem("credentials") !== null;
+  // isAuthenticated = () => localStorage.getItem("credentials") !== null;
+   setUser = () => {
+    //  localStorage.setItem("userId", 1)
+    }
 
   render() {
     return (
@@ -33,11 +36,12 @@ export default class PathView extends Component {
           exact
           path="/meals"
           render={props => {
-            if (this.isAuthenticated()) {
+            // if (this.isAuthenticated()) {
               return <MealList {...props} />;
-            } else {
-              return <Redirect to="/" />;
-            }
+            // } else {
+              
+              // return <Redirect to="/" />;
+            // }
           }}
         />
         <Route
