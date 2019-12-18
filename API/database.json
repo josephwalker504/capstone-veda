@@ -25,6 +25,13 @@
       "FoodPortion": "small Famous Amos bag",
       "Comment": "Kloé's snack for the day",
       "timeStamp": "2019-12-16T21:52:42.155Z"
+    },
+    {
+      "FoodType": "Pizza",
+      "FoodPortion": "1/2 slice",
+      "Comment": "Zoié really didn't want the pizza, just was just being greedy",
+      "timeStamp": "2019-12-17T00:30:52.849Z",
+      "id": 4
     }
   ],
   "child": [
@@ -43,11 +50,11 @@
       "userId": 2
     }
   ],
-  "potty": [
+  "pottys": [
     {
       "id": 1,
-      "action 1": true,
-      "action 2": false,
+      "action1": true,
+      "action2": false,
       "comment": "Just a wet diaper",
       "timeStamp": "12.12.19",
       "chidId": 2,
@@ -55,12 +62,19 @@
     },
     {
       "id": 2,
-      "action 1": false,
-      "action 2": true,
+      "action1": false,
+      "action2": true,
       "comment": "Zoié used the bigGirl potty",
       "timeStamp": "12.12.19",
       "chidId": 1,
       "userId": 2
+    },
+    {
+      "action1": false,
+      "action2": false,
+      "comment": "mmm",
+      "timeStamp": "2019-12-17T19:59:44.811Z",
+      "id": 3
     }
   ],
   "sleep": [
