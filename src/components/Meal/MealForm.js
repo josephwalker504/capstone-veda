@@ -30,7 +30,7 @@ class MealForm extends Component {
                 FoodType: this.state.FoodType,
                 FoodPortion: this.state.FoodPortion,
                 Comment: this.state.Comment,
-                timeStamp: new Date.now(),
+                timeStamp: new Date(),
                 
             };
             MealManager.post(meal)
