@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import MealManager from '../../Modules/MealManager';
+import Dropdown from 'react-dropdown'
 
 
 
@@ -10,8 +11,21 @@ class MealForm extends Component {
         FoodPortion: "",
         Comment: "",
         timeStamp: "",
-        loadingStatus: false
+        loadingStatus: false,
+        userId: "",
+        childId: "",
+        children: []
     };
+    componentDidMount() {
+        const storedId = localStorage.getItem("currentUser");
+        MealManager.childMeal(storedId).then(childArray => {
+          console.log("componentDidMount", childArray);
+          this.setState({
+           children: childArray
+
+          });
+        });
+      }
 
     handleFieldChange = evt => {
         const stateToChange = {};
@@ -19,18 +33,22 @@ class MealForm extends Component {
         this.setState(stateToChange);
         console.log("handleFieldChange")
     };
-
+    
     makeNewMeal = evt => {
         evt.preventDefault();
         if(this.state.FoodType === "" || this.state.FoodPortion === "" || this.state.Comment === "") {
             window.alert("All Fields Required");
         } else {
+            const storedId = localStorage.getItem("currentUser");
+            console.log("storedId",storedId);
             this.setState({ loadingStatus: true });
             const meal = {
                 FoodType: this.state.FoodType,
                 FoodPortion: this.state.FoodPortion,
                 Comment: this.state.Comment,
                 timeStamp: new Date(),
+                userId: parseInt(storedId),
+                childId: parseInt(this.state.childId)
                 
             };
             MealManager.post(meal)
@@ -38,6 +56,8 @@ class MealForm extends Component {
             console.log("makeNewMeal")
         }
     };
+   
+  
 
 
 
@@ -46,6 +66,18 @@ class MealForm extends Component {
         return(
             <div className="card">
                 <div className="card-content">
+                    <section>
+                        <label className="select-child">Select Child</label>
+                        <select onChange={this.handleFieldChange} id="childId" value={this.state.childId}>
+                            <option>Select Child</option>
+                            {this.state.children.map(children =>
+                                <option key={children.id} value={children.id}>
+                                    {children.name}
+                                </option>
+                                )}
+                        </select>
+
+                    </section>
                     <section>
                         <label className="meal-type">Food Type</label>
                         <input type="text" onChange={this.handleFieldChange} id="FoodType"></input>

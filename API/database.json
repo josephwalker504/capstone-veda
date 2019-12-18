@@ -1,5 +1,5 @@
 {
-  "user": [
+  "users": [
     {
       "id": 1,
       "email": "jojo@walker.com",
@@ -17,17 +17,39 @@
       "FoodType": "Chicken",
       "FoodPortion": "4pc",
       "Comment": "Zoié wanted Wendy's for breakfast",
-      "timeStamp": "2019-12-16T21:50:50.191Z"
+      "timeStamp": "2019-12-16T21:50:50.191Z",
+      "userId": 2,
+      "childId": 1
     },
     {
       "id": 2,
       "FoodType": "Cookies",
       "FoodPortion": "small Famous Amos bag",
       "Comment": "Kloé's snack for the day",
-      "timeStamp": "2019-12-16T21:52:42.155Z"
+      "timeStamp": "2019-12-16T21:52:42.155Z",
+      "userId": 1,
+      "childId": 1
+    },
+    {
+      "FoodType": "Pizza",
+      "FoodPortion": "1/2 slice",
+      "Comment": "Zoié really didn't want the pizza, just was just being greedy",
+      "timeStamp": "2019-12-17T00:30:52.849Z",
+      "id": 4,
+      "userId": 2,
+      "childId": 1
+    },
+    {
+      "FoodType": "gggg",
+      "FoodPortion": "gggggg",
+      "Comment": "ggggggg",
+      "timeStamp": "2019-12-18T22:30:01.205Z",
+      "userId": 1,
+      "childId": 1,
+      "id": 5
     }
   ],
-  "child": [
+  "children": [
     {
       "id": 1,
       "name": "Zoié",
@@ -43,11 +65,11 @@
       "userId": 2
     }
   ],
-  "potty": [
+  "pottys": [
     {
       "id": 1,
-      "action 1": true,
-      "action 2": false,
+      "action1": true,
+      "action2": false,
       "comment": "Just a wet diaper",
       "timeStamp": "12.12.19",
       "chidId": 2,
@@ -55,12 +77,19 @@
     },
     {
       "id": 2,
-      "action 1": false,
-      "action 2": true,
+      "action1": false,
+      "action2": true,
       "comment": "Zoié used the bigGirl potty",
       "timeStamp": "12.12.19",
       "chidId": 1,
       "userId": 2
+    },
+    {
+      "action1": false,
+      "action2": false,
+      "comment": "mmm",
+      "timeStamp": "2019-12-17T19:59:44.811Z",
+      "id": 3
     }
   ],
   "sleep": [

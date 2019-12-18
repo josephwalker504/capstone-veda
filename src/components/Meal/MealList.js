@@ -45,6 +45,7 @@ class MealList extends Component {
                 
             </section>
             <div className="meal-content">
+            <p>{this.state.child}</p>
                 {this.state.meals.map(meal =>
                     <MealSection
                     key={meal.id} 

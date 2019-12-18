@@ -4,6 +4,7 @@ class LogIn extends Component {
     state = {
         email: "",
         password: ""
+    
     }
 
     handleInputChange = (evt) => {
@@ -14,11 +15,15 @@ class LogIn extends Component {
 
     handleLogin = (evt) => {
         evt.preventDefault()
-        this.props.setUser({
-            email: this.state.email,
-            password: this.state.password
-        })
-        this.props.history.push("/meal");
+       localStorage.setItem(
+           "credentials",
+           JSON.stringify({
+               email: this.state.email,
+               password: this.state.password,
+               id: this.state.id
+           })
+           )
+           this.props.history.push("/child");
     }
 
     render() {

@@ -8,6 +8,7 @@ class MealSection extends Component {
         return(
             <div className="section">
                 <div className="section-body">
+                <p>{this.props.meal.child.name}</p>
         <h4 onClick={() =>{this.props.history.push(`/meals/${this.props.meal.id}/edit`)}} className="section-title"><b>{this.props.meal.FoodType}</b></h4>
                 </div>
                 <div className="time-button">

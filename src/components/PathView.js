@@ -5,9 +5,15 @@ import Reg from "./Auth/Reg";
 import MealForm from "./Meal/MealForm";
 import MealEditForm from "./Meal/MealEditForm";
 import MealList from "./Meal/MealList";
+import PottyForm from "./Potty/PottyForm";
+import PottyEditForm from "./Potty/PottyEditForm";
+
 
 export default class PathView extends Component {
-  isAuthenticated = () => localStorage.getItem("credentials") !== null;
+  // isAuthenticated = () => localStorage.getItem("credentials") !== null;
+   setUser = () => {
+    //  localStorage.setItem("userId", 1)
+    }
 
   render() {
     return (
@@ -30,11 +36,12 @@ export default class PathView extends Component {
           exact
           path="/meals"
           render={props => {
-            if (this.isAuthenticated()) {
+            // if (this.isAuthenticated()) {
               return <MealList {...props} />;
-            } else {
-              return <Redirect to="/" />;
-            }
+            // } else {
+              
+              // return <Redirect to="/" />;
+            // }
           }}
         />
         <Route
@@ -47,6 +54,20 @@ export default class PathView extends Component {
           path="/meals/:mealId(\d+)/edit"
           render={props => {
             return <MealEditForm {...props} />;
+        }}
+        />
+
+<Route
+          path="/potty"
+          render={props => {
+            return <PottyForm setUser={this.props.setUser} {...props} />;
+          }}
+        />
+
+<Route
+          path="/pottys/:pottyId(\d+)/edit"
+          render={props => {
+            return <PottyEditForm {...props} />;
         }}
         />
       </React.Fragment>
