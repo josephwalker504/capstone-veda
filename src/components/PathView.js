@@ -11,19 +11,23 @@ import SleepForm from "./Sleep/SleepForm";
 
 
 export default class PathView extends Component {
-  // isAuthenticated = () => localStorage.getItem("credentials") !== null;
-   setUser = () => {
-    //  localStorage.setItem("userId", 1)
-    }
+  isAuthenticated = () => localStorage.getItem("credentials") !== null;
+  //  setUser = () => {
+  //    localStorage.setItem("userId", 1)
+  //   }
 
   render() {
     return (
       <React.Fragment>
-        <Route
+       <Route
           exact
           path="/"
           render={props => {
+            if (this.isAuthenticated())
+           {return <MealList />;
+          } else {
             return <Login setUser={this.props.setUser} {...props} />;
+          }
           }}
         />
         <Route
@@ -37,12 +41,12 @@ export default class PathView extends Component {
           exact
           path="/meals"
           render={props => {
-            // if (this.isAuthenticated()) {
+            if (this.isAuthenticated()) {
               return <MealList {...props} />;
-            // } else {
+            } else {
               
-              // return <Redirect to="/" />;
-            // }
+              return <Redirect to="meals" />;
+            }
           }}
         />
         <Route
