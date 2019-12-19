@@ -7,7 +7,9 @@ class MealEditForm extends Component {
     FoodPortion: "",
     Comment: "",
     timeStamp: "",
-    loadingStatus: true
+    loadingStatus: true,
+    children: [],
+    childId: ""
   };
 
   handleFieldChange = evt => {
@@ -17,6 +19,7 @@ class MealEditForm extends Component {
   };
 
   editMeal = evt => {
+    const storedId = localStorage.getItem("currentUser");
     evt.preventDefault();
     this.setState({ loadingStatus: true });
     const editMeal = {
@@ -24,7 +27,9 @@ class MealEditForm extends Component {
       FoodType: this.state.FoodType,
       FoodPortion: this.state.FoodPortion,
       Comment: this.state.Comment,
-      timeStamp: this.state.timeStamp
+      timeStamp: this.state.timeStamp,
+      userId: parseInt(storedId),
+      childId: parseInt(this.state.childId)
     };
     MealManager.update(editMeal).then(() => this.props.history.push("/meals"));
   };
@@ -37,11 +42,20 @@ class MealEditForm extends Component {
         FoodPortion: meal.FoodPortion,
         Comment: meal.Comment,
         timeStamp: new Date(),
-        loadingStatus: false
+        loadingStatus: false,
+        childId: `${meal.child.id}`
       });
     });
+    const storedId = localStorage.getItem("currentUser");
+    MealManager.childMeal(storedId).then(childArray => {
+      console.log("componentDidMount", childArray);
+      this.setState({
+       children: childArray
+      });
+     });
   }
 
+  
   deleteMeal = id => {
     MealManager.delete(id)
     .then(() => {
@@ -55,12 +69,19 @@ class MealEditForm extends Component {
 }
 
   render() {
-    console.log("this.state", this.state);
+    console.log("this.state", this.state)
     return (
       <form>
         <fieldset>
           <div className="card">
             <div className="card-content">
+            <select onChange={this.handleFieldChange} id="childId" value={this.state.childId}>
+                <option>Select Child</option>
+                {this.state.children.map(child =>
+                    <option key={child.id} id={child.id} value={child.id}>{child.name}</option>
+                  )}
+            </select>
+         
               <section>
                 <label className="meal-type">Food Type</label>
                 <input
@@ -69,7 +90,6 @@ class MealEditForm extends Component {
                   id="FoodType"
                   value={this.state.FoodType}
                 ></input>
-                {/* ID's must match state: keys */}
               </section>
 
               <section>
@@ -101,19 +121,16 @@ class MealEditForm extends Component {
                 >
                   ENTER
                 </button>
-                {/* <button
-                  type="button"
-                  onClick={() => this.props.deleteMeal(this.props.meal.id)}
-                >
-                  Delete
-                </button> */}
+                
               </div>
             </div>
           </div>
         </fieldset>
       </form>
-    );
+    )
   }
 }
+
+
 
 export default MealEditForm;

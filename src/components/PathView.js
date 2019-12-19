@@ -7,6 +7,7 @@ import MealEditForm from "./Meal/MealEditForm";
 import MealList from "./Meal/MealList";
 import PottyForm from "./Potty/PottyForm";
 import PottyEditForm from "./Potty/PottyEditForm";
+import SleepForm from "./Sleep/SleepForm";
 
 
 export default class PathView extends Component {
@@ -69,6 +70,13 @@ export default class PathView extends Component {
           render={props => {
             return <PottyEditForm {...props} />;
         }}
+        />
+
+<Route
+          path="/sleep"
+          render={props => {
+            return <SleepForm setUser={this.props.setUser} {...props} />;
+          }}
         />
       </React.Fragment>
     );
