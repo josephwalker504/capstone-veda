@@ -38,15 +38,6 @@
       "id": 4,
       "userId": 2,
       "childId": 1
-    },
-    {
-      "FoodType": "gggg",
-      "FoodPortion": "gggggg",
-      "Comment": "ggggggg",
-      "timeStamp": "2019-12-18T22:30:01.205Z",
-      "userId": 1,
-      "childId": 1,
-      "id": 5
     }
   ],
   "children": [
