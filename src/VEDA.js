@@ -5,8 +5,8 @@ import PathView from "./components/PathView"
 
 
 
-let i = localStorage.getItem("currentUser", 1)
-localStorage.setItem("currentUser", 1)
+// let i = localStorage.getItem("currentUser", 1)
+// localStorage.setItem("currentUser", 1)
 
 class VEDA extends Component {
 
@@ -42,9 +42,9 @@ componentDidMount() {
     render() {
         return (
            <React.Fragment>
-               <NavBar />
-               <PathView user={this.state.user}
-               setUser={this.setUser} />
+               <NavBar clearUser={this.clearUser} setUser={this.setUser} />
+               <PathView 
+                />
            </React.Fragment>
         )
     }

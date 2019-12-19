@@ -15,41 +15,47 @@ class LogIn extends Component {
 
     handleLogin = (evt) => {
         evt.preventDefault()
-       localStorage.setItem(
+        if(this.state.email === "" || this.state.password === "") {
+            window.alert("Please Sign In");
+        } else {
+        localStorage.setItem(
            "credentials",
            JSON.stringify({
                email: this.state.email,
                password: this.state.password,
                id: this.state.id
-           })
-           )
-           this.props.history.push("/child");
+            })
+            ) 
+        };
+        
+           this.props.history.push("/meals");
     }
 
     render() {
         return (
-            <form onSubmit={this.handleLogin}>
-                <fieldset>
-                    <h3>LOGIN</h3>
-                    <div>
+          <form onSubmit={this.handleLogin}>
+            <fieldset>
+                <h3>Please Sign In</h3>
+                <div className="formgrid">
                     <input onChange={this.handleInputChange} type="email"
-                    id="email" 
-                    placeholder="Email Address" 
-                    require="" 
-                    autoFocus="" />
+                        id="email"
+                        placeholder="Email address"
+                        required="" autoFocus="" />
                     <label htmlFor="inputEmail"></label>
+    
                     <input onChange={this.handleInputChange} type="password"
-                    id="password" 
-                    placeholder="Password" 
-                    require="" 
-                    autoFocus="" />
+                        id="password"
+                        placeholder="Password"
+                        required="" />
                     <label htmlFor="inputPassword"></label>
-                    <button type="submit">Sign In</button>
-                    </div>
-                </fieldset>
-            </form>
+                </div>
+                <button type="submit">
+                    Sign in
+                </button>
+            </fieldset>
+          </form>
         )
-    }
+      }
 }
 
 export default LogIn
