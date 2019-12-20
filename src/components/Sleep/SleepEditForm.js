@@ -26,7 +26,7 @@ class SleepEditForm extends Component {
         evt.preventDefault();
         this.setState({ loadingStatus: true });
         const editSleep = {
-          id: this.props.match.params.childId,
+          id: this.props.match.params.sleepId,
           comment: this.state.comment,
           timeStamp: this.state.timeStamp,
           userId: parseInt(storedId),
@@ -81,7 +81,7 @@ class SleepEditForm extends Component {
                         <textarea type="text" value={this.state.comment} onChange={this.handleFieldChange} id="comment"></textarea>
                     </section>
                     <section>
-                    <button type="button" onClick={this.NewSleep}>SLEEP</button>
+                    <button type="button" onClick={this.editSleep}>SLEEP</button>
                     </section>
                 </form>
             </div>

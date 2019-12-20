@@ -18,35 +18,26 @@
       "FoodPortion": "4pc",
       "Comment": "Zoié wanted Wendy's for breakfast",
       "timeStamp": "2019-12-20T02:12:30.272Z",
-      "userId": null,
-      "childId": 1
-    },
-    {
-      "id": 2,
-      "FoodType": "Cookies",
-      "FoodPortion": "small Famous Amos bag",
-      "Comment": "Kloé's snack for the day",
-      "timeStamp": "2019-12-16T21:52:42.155Z",
       "userId": 1,
       "childId": 1
     },
     {
-      "id": 4,
-      "FoodType": "Pizza",
-      "FoodPortion": "1/2 slice",
-      "Comment": "Zoié really didn't want the pizza, just was just being greedy",
-      "timeStamp": "2019-12-20T16:03:34.376Z",
+      "id": 2,
+      "FoodType": "Cookie and Ice cream",
+      "FoodPortion": "small Famous Amos bag",
+      "Comment": "Kloé's snack for the day",
+      "timeStamp": "2019-12-20T19:40:13.479Z",
       "userId": null,
       "childId": 1
     },
     {
-      "FoodType": "cxc",
-      "FoodPortion": "xczc",
-      "Comment": "lk",
-      "timeStamp": "2019-12-20T16:03:51.070Z",
+      "FoodType": "Apple Pie",
+      "FoodPortion": "slice",
+      "Comment": "she really liked it",
+      "timeStamp": "2019-12-20T19:42:07.282Z",
       "userId": null,
       "childId": null,
-      "id": 5
+      "id": 3
     }
   ],
   "children": [
@@ -55,14 +46,14 @@
       "name": "Zoié",
       "gender": "females",
       "birthdate": "12.21.16",
-      "userId": null
+      "userId": 1
     },
     {
       "id": 2,
       "name": "Kloé",
-      "birthdate": "04.25.18",
       "gender": "female",
-      "userId": 2
+      "birthdate": "04.25.18",
+      "userId": null
     },
     {
       "name": "Joe",
@@ -73,7 +64,7 @@
     },
     {
       "id": 4,
-      "name": "Jordynn",
+      "name": "Jordynn Walker!!!",
       "gender": "female",
       "birthdate": "2019-05-29",
       "userId": null
@@ -123,15 +114,16 @@
     },
     {
       "comment": "No time to sleep",
-      "userId": null,
-      "childId": null,
+      "userId": 1,
+      "childId": 1,
       "id": 3
     },
     {
-      "comment": "sleep time",
-      "userId": null,
-      "childId": null,
-      "id": 4
+      "id": 4,
+      "comment": "No sleep during capStone",
+      "timeStamp": "2019-12-20T19:11:48.190Z",
+      "userId": 1,
+      "childId": 1
     }
   ],
   "stories": [
