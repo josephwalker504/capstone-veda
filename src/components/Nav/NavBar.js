@@ -30,7 +30,7 @@ class NavBar extends Component {
                         <Link to="/pottys">Potty</Link>
                     </li>
                     <li>
-                        <Link to="/sleep">Sleep</Link>
+                        <Link to="/sleeps">Sleep</Link>
                     </li>
                     <li>
                         <Link to="/stories">Story</Link>

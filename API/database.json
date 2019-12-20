@@ -104,7 +104,7 @@
       "id": 4
     }
   ],
-  "sleep": [
+  "sleeps": [
     {
       "id": 1,
       "childId": 1,
@@ -118,6 +118,18 @@
       "comment": "Nite Nite",
       "timeStamp": "12.12.19",
       "userId": 2
+    },
+    {
+      "comment": "No time to sleep",
+      "userId": null,
+      "childId": null,
+      "id": 3
+    },
+    {
+      "comment": "No time to sleep",
+      "userId": null,
+      "childId": null,
+      "id": 4
     }
   ],
   "stories": [

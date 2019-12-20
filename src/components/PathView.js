@@ -12,6 +12,8 @@ import ChildForm from "./Child/ChildForm";
 import ChildList from "./Child/ChildList";
 import ChildEditForm from "./Child/ChildEditForm";
 import PottyList from "./Potty/PottyList";
+import SleepList from "./Sleep/SleepList";
+import SleepEditForm from "./Sleep/SleepEditForm";
 
 
 export default class PathView extends Component {
@@ -94,6 +96,22 @@ export default class PathView extends Component {
             return <SleepForm setUser={this.props.setUser} {...props} />;
           }}
         />
+
+<Route
+          exact
+          path="/sleeps"
+          render={props => {
+            return <SleepList setUser={this.props.setUser} {...props} />;
+          }}
+        />
+
+<Route
+          path="/sleeps/:sleepId(\d+)/edit"
+          render={props => {
+            return <SleepEditForm {...props} />;
+        }}
+        />
+
         <Route
           path="/child"
           render={props => {
