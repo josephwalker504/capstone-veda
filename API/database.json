@@ -91,38 +91,17 @@
     },
     {
       "action1": false,
-      "action2": false,
-      "comment": "mmm",
-      "timeStamp": "2019-12-17T19:59:44.811Z",
+      "action2": "on",
+      "comment": "Testing ADD",
+      "timeStamp": "2019-12-20T04:55:33.320Z",
       "id": 3
     },
     {
       "action1": "on",
       "action2": false,
-      "comment": "",
-      "timeStamp": "2019-12-20T02:57:00.242Z",
+      "comment": "Testing delete",
+      "timeStamp": "2019-12-20T04:55:52.703Z",
       "id": 4
-    },
-    {
-      "action1": false,
-      "action2": "on",
-      "comment": "nnnn",
-      "timeStamp": "2019-12-20T02:57:21.849Z",
-      "id": 5
-    },
-    {
-      "action1": "on",
-      "action2": false,
-      "comment": "mmmm",
-      "timeStamp": "2019-12-20T03:40:36.145Z",
-      "id": 6
-    },
-    {
-      "action1": false,
-      "action2": false,
-      "comment": "",
-      "timeStamp": "2019-12-20T04:21:50.417Z",
-      "id": 7
     }
   ],
   "sleep": [
