@@ -31,22 +31,31 @@
       "childId": 1
     },
     {
+      "id": 4,
       "FoodType": "Pizza",
       "FoodPortion": "1/2 slice",
       "Comment": "Zoié really didn't want the pizza, just was just being greedy",
-      "timeStamp": "2019-12-17T00:30:52.849Z",
-      "id": 4,
-      "userId": 2,
+      "timeStamp": "2019-12-20T16:03:34.376Z",
+      "userId": null,
       "childId": 1
+    },
+    {
+      "FoodType": "cxc",
+      "FoodPortion": "xczc",
+      "Comment": "lk",
+      "timeStamp": "2019-12-20T16:03:51.070Z",
+      "userId": null,
+      "childId": null,
+      "id": 5
     }
   ],
   "children": [
     {
       "id": 1,
       "name": "Zoié",
+      "gender": "females",
       "birthdate": "12.21.16",
-      "gender": "female",
-      "userId": 1
+      "userId": null
     },
     {
       "id": 2,
@@ -113,20 +122,13 @@
       "userId": 1
     },
     {
-      "id": 2,
-      "childId": 2,
-      "comment": "Nite Nite",
-      "timeStamp": "12.12.19",
-      "userId": 2
-    },
-    {
       "comment": "No time to sleep",
       "userId": null,
       "childId": null,
       "id": 3
     },
     {
-      "comment": "No time to sleep",
+      "comment": "sleep time",
       "userId": null,
       "childId": null,
       "id": 4

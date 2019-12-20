@@ -19,7 +19,7 @@ class MealList extends Component {
                 meals: mealArray
             })
         })
-    }
+    };
     deleteMeal = id => {
         MealManager.delete(id)
         .then(() => {
