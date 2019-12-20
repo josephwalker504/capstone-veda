@@ -31,12 +31,12 @@
       "childId": 1
     },
     {
+      "id": 4,
       "FoodType": "Pizza",
       "FoodPortion": "1/2 slice",
       "Comment": "Zoié really didn't want the pizza, just was just being greedy",
-      "timeStamp": "2019-12-17T00:30:52.849Z",
-      "id": 4,
-      "userId": 2,
+      "timeStamp": "2019-12-20T16:10:22.266Z",
+      "userId": null,
       "childId": 1
     }
   ],
@@ -64,7 +64,7 @@
     },
     {
       "id": 4,
-      "name": "Jordynn",
+      "name": "Jordynn Walker",
       "gender": "female",
       "birthdate": "2019-05-29",
       "userId": null
