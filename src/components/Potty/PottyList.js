@@ -45,7 +45,7 @@ class PottyList extends Component {
                             <PottySection
                             key={potty.id} 
                             potty={potty}
-                            deleteChild={this.deleteChild}
+                            deletePotty={this.deletePotty}
                             {...this.props}
                             />
                             )}
