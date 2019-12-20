@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
+import UserManager from '../../Modules/UserManager';
+
 
 class LogIn extends Component {
     state = {
         email: "",
-        password: ""
-    
+        password: "",
     }
 
     handleInputChange = (evt) => {
@@ -14,6 +15,19 @@ class LogIn extends Component {
     }
 
     handleLogin = (evt) => {
+        UserManager.getAll()
+        .then(userArray => {
+            userArray.map(user => {
+                
+                if (this.state.email === user.email) {
+                   this.props.setUser({ 
+                       email: this.state.email,
+                       password: this.state.password,
+                       id: user.id
+                   })
+                }
+            })
+        })
         evt.preventDefault()
         if(this.state.email === "" || this.state.password === "") {
             window.alert("Please Sign In");

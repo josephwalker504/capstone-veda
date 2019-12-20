@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import MealManager from '../../Modules/MealManager';
-import Dropdown from 'react-dropdown'
+
 
 
 
@@ -17,7 +17,7 @@ class MealForm extends Component {
         children: []
     };
     componentDidMount() {
-        const storedId = localStorage.getItem("currentUser");
+        const storedId = localStorage.getItem("setUser");
         MealManager.childMeal(storedId).then(childArray => {
           console.log("componentDidMount", childArray);
           this.setState({
@@ -39,7 +39,7 @@ class MealForm extends Component {
         if(this.state.FoodType === "" || this.state.FoodPortion === "" || this.state.Comment === "") {
             window.alert("All Fields Required");
         } else {
-            const storedId = localStorage.getItem("currentUser");
+            const storedId = localStorage.getItem("setUser");
             console.log("storedId",storedId);
             this.setState({ loadingStatus: true });
             const meal = {

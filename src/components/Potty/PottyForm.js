@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PottyManager from '../../Modules/PottyManager';
+import ChildManager from '../../Modules/ChildManager';
 
 
 
@@ -10,14 +11,28 @@ class PottyForm extends Component {
             action1: false,
             action2: false,
             comment: "",
-            loadingStatus: false
+            loadingStatus: false,
+            userId: "",
+            childId: "",
+            children: []
         };
+
+        // componentDidMount = evt => {
+        //     const storedId = localStorage.getItem("setUser");
+        //     ChildManager.children(storedId).then(childArray => {
+        //       console.log("componentDidMount", childArray);
+        //       this.setState({
+        //        children: childArray
+    
+        //       });
+        //     });
+        // }
 
         handleFieldChange = evt => {
             const stateToChange = {};
             stateToChange[evt.target.id] = evt.target.value;
             this.setState(stateToChange);
-            // console.log("handleFieldChange" )
+            console.log("handleFieldChange")
         };
 
         pottySelection = evt => {
@@ -26,13 +41,11 @@ class PottyForm extends Component {
                 action1: true,
                 action2: true
             }
-            checkedPotty[evt.target.id] = evt.target.value;
-            this.setState(checkedPotty);
 
         }
         NewPotty = evt => {
             evt.preventDefault();
-            if(this.state.comment === "") {
+            if(this.pottySelection === true) {
                 window.alert("OOPS!! You Forgot Something");
             } else{
                 this.setState({ loadingStatus: true });

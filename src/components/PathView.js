@@ -8,6 +8,10 @@ import MealList from "./Meal/MealList";
 import PottyForm from "./Potty/PottyForm";
 import PottyEditForm from "./Potty/PottyEditForm";
 import SleepForm from "./Sleep/SleepForm";
+import ChildForm from "./Child/ChildForm";
+import ChildList from "./Child/ChildList";
+import ChildEditForm from "./Child/ChildEditForm";
+import PottyList from "./Potty/PottyList";
 
 
 export default class PathView extends Component {
@@ -77,11 +81,44 @@ export default class PathView extends Component {
         />
 
 <Route
+          exact
+          path="/pottys"
+          render={props => {
+            return <PottyList setUser={this.props.setUser} {...props} />;
+          }}
+        />
+
+<Route
           path="/sleep"
           render={props => {
             return <SleepForm setUser={this.props.setUser} {...props} />;
           }}
         />
+        <Route
+          path="/child"
+          render={props => {
+            return <ChildForm setUser={this.props.setUser} {...props} />;
+          }}
+        />
+
+<Route
+          exact
+          path="/children"
+          render={props => {
+            return <ChildList setUser={this.props.setUser} {...props} />;
+          }}
+        />
+
+<Route
+          path="/children/:childId(\d+)/edit"
+          render={props => {
+            return <ChildEditForm setUser={this.props.setUser} {...props} />;
+        }}
+        />
+
+
+
+
       </React.Fragment>
     );
   }

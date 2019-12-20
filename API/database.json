@@ -17,8 +17,8 @@
       "FoodType": "Chicken",
       "FoodPortion": "4pc",
       "Comment": "Zoié wanted Wendy's for breakfast",
-      "timeStamp": "2019-12-16T21:50:50.191Z",
-      "userId": 2,
+      "timeStamp": "2019-12-20T02:12:30.272Z",
+      "userId": null,
       "childId": 1
     },
     {
@@ -54,6 +54,20 @@
       "birthdate": "04.25.18",
       "gender": "female",
       "userId": 2
+    },
+    {
+      "name": "Joe",
+      "gender": "Male",
+      "birthdate": "2019-12-18",
+      "userId": 1,
+      "id": 3
+    },
+    {
+      "id": 4,
+      "name": "Jordynn",
+      "gender": "female",
+      "birthdate": "2019-05-29",
+      "userId": null
     }
   ],
   "pottys": [
@@ -81,6 +95,34 @@
       "comment": "mmm",
       "timeStamp": "2019-12-17T19:59:44.811Z",
       "id": 3
+    },
+    {
+      "action1": "on",
+      "action2": false,
+      "comment": "",
+      "timeStamp": "2019-12-20T02:57:00.242Z",
+      "id": 4
+    },
+    {
+      "action1": false,
+      "action2": "on",
+      "comment": "nnnn",
+      "timeStamp": "2019-12-20T02:57:21.849Z",
+      "id": 5
+    },
+    {
+      "action1": "on",
+      "action2": false,
+      "comment": "mmmm",
+      "timeStamp": "2019-12-20T03:40:36.145Z",
+      "id": 6
+    },
+    {
+      "action1": false,
+      "action2": false,
+      "comment": "",
+      "timeStamp": "2019-12-20T04:21:50.417Z",
+      "id": 7
     }
   ],
   "sleep": [
