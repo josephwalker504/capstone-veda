@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import MealManager from "../../Modules/MealManager";
+import ChildManager from "../../Modules/ChildManager";
 
 class MealEditForm extends Component {
   state = {
@@ -47,7 +48,7 @@ class MealEditForm extends Component {
       });
     });
     const storedId = localStorage.getItem("currentUser");
-    MealManager.childMeal(storedId).then(childArray => {
+    ChildManager.childUser(storedId).then(childArray => {
       console.log("componentDidMount", childArray);
       this.setState({
        children: childArray

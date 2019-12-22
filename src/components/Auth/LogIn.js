@@ -6,6 +6,7 @@ class LogIn extends Component {
     state = {
         email: "",
         password: "",
+        id: "",
     }
 
     handleInputChange = (evt) => {

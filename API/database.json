@@ -27,7 +27,7 @@
       "FoodPortion": "small Famous Amos bag",
       "Comment": "Kloé's snack for the day",
       "timeStamp": "2019-12-20T19:40:13.479Z",
-      "userId": null,
+      "userId": 1,
       "childId": 1
     },
     {
@@ -35,8 +35,8 @@
       "FoodPortion": "slice",
       "Comment": "she really liked it",
       "timeStamp": "2019-12-20T19:42:07.282Z",
-      "userId": null,
-      "childId": null,
+      "userId": 1,
+      "childId": 1,
       "id": 3
     }
   ],
@@ -53,20 +53,27 @@
       "name": "Kloé",
       "gender": "female",
       "birthdate": "04.25.18",
-      "userId": null
+      "userId": 1
     },
     {
+      "id": 3,
       "name": "Joe",
       "gender": "Male",
       "birthdate": "2019-12-18",
-      "userId": 1,
-      "id": 3
+      "userId": null
     },
     {
       "id": 4,
       "name": "Jordynn Walker!!!",
       "gender": "female",
       "birthdate": "2019-05-29",
+      "userId": 1
+    },
+    {
+      "id": 5,
+      "name": "dddww",
+      "gender": "femalewwww",
+      "birthdate": "2019-12-10",
       "userId": null
     }
   ],
