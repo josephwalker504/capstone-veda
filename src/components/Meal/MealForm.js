@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import MealManager from '../../Modules/MealManager';
+import ChildManager from '../../Modules/ChildManager';
 
 
 
@@ -17,14 +18,25 @@ class MealForm extends Component {
         children: []
     };
     componentDidMount() {
-        const storedId = localStorage.getItem("setUser");
-        MealManager.childMeal(storedId).then(childArray => {
+        MealManager.get(this.props.match.params.mealId).then(meal => {
+          console.log("meal", meal);
+          this.setState({
+            FoodType: meal.FoodType,
+            FoodPortion: meal.FoodPortion,
+            Comment: meal.Comment,
+            timeStamp: new Date(),
+            loadingStatus: false,
+            childId: meal.childId,
+            userId: meal.userId
+          });
+        });
+        const storedId = localStorage.getItem("credentials");
+        ChildManager.childUser(storedId).then(childArray => {
           console.log("componentDidMount", childArray);
           this.setState({
            children: childArray
-
           });
-        });
+         });
       }
 
     handleFieldChange = evt => {
@@ -39,7 +51,7 @@ class MealForm extends Component {
         if(this.state.FoodType === "" || this.state.FoodPortion === "" || this.state.Comment === "") {
             window.alert("All Fields Required");
         } else {
-            const storedId = localStorage.getItem("setUser");
+            const storedId = localStorage.getItem("credentials");
             console.log("storedId",storedId);
             this.setState({ loadingStatus: true });
             const meal = {
