@@ -18,13 +18,13 @@ class LogIn extends Component {
     handleLogin = (evt) => {
         UserManager.getAll()
         .then(userArray => {
-            userArray.map(user => {
+            userArray.map(users => {
                 
-                if (this.state.email === user.email) {
+                if (this.state.email === users.email) {
                    this.props.setUser({ 
                        email: this.state.email,
                        password: this.state.password,
-                       id: user.id
+                       id: users.id
                    })
                 }
             })

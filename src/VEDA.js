@@ -12,7 +12,6 @@ class VEDA extends Component {
 
     state = {
         user: false,
-        currentUser: ""
     }
 
     isAuthenticated = () =>localStorage.getItem("credentials", 1) !==null
