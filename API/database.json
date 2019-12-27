@@ -44,7 +44,7 @@
       "FoodPortion": "Half of sandwich ",
       "Comment": "I didn't care for the sandwich",
       "timeStamp": "2019-12-23T16:29:06.979Z",
-      "userId": null,
+      "userId": 1,
       "childId": 2,
       "id": 4
     },
@@ -53,27 +53,9 @@
       "FoodPortion": "2 slices",
       "Comment": "I gave her a slice and watched her eat it. Went to the bathroom and when I came back she was eating another slice. I don't know who give it to her or how she got another one",
       "timeStamp": "2019-12-26T15:33:54.448Z",
-      "userId": null,
+      "userId": 1,
       "childId": 1,
       "id": 5
-    },
-    {
-      "FoodType": "carrots",
-      "FoodPortion": "1 baby jar",
-      "Comment": "after eating the carrots she seem as if she was still hungry",
-      "timeStamp": "2019-12-26T15:42:40.343Z",
-      "userId": null,
-      "childId": 4,
-      "id": 6
-    },
-    {
-      "FoodType": "cereal ",
-      "FoodPortion": "kiddy bowl",
-      "Comment": "apple Jacks more milk went into her lap than her mouth",
-      "timeStamp": "2019-12-26T15:46:45.844Z",
-      "userId": null,
-      "childId": 2,
-      "id": 7
     }
   ],
   "children": [
@@ -96,7 +78,7 @@
       "name": "Joe",
       "gender": "Male",
       "birthdate": "2019-12-18",
-      "userId": null
+      "userId": 1
     },
     {
       "id": 4,
@@ -110,7 +92,7 @@
       "name": "dddww",
       "gender": "femalewwww",
       "birthdate": "2019-12-10",
-      "userId": null
+      "userId": 1
     }
   ],
   "pottys": [
