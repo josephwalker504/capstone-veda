@@ -11,13 +11,13 @@ import PathView from "./components/PathView"
 class VEDA extends Component {
 
     state = {
-        user: false
+        user: false,
     }
 
-    isAuthenticated = () =>localStorage.getItem("credentials") !==null
+    isAuthenticated = () =>localStorage.getItem("credentials", 1) !==null
     setUser = (authObj) => {
         localStorage.setItem(
-            "credentials",
+            "credentials", 1,
             JSON.stringify(authObj)
             )
             this.setState({
@@ -28,7 +28,7 @@ class VEDA extends Component {
 
 
 clearUser = () => {
-    localStorage.removeItem("credentials")
+    localStorage.removeItem("credentials", 1)
     this.setState({
         user: this.isAuthenticated()
     })

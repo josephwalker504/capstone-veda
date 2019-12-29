@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import MealManager from "../../Modules/MealManager";
+import ChildManager from "../../Modules/ChildManager";
 
 class MealEditForm extends Component {
   state = {
@@ -9,18 +10,20 @@ class MealEditForm extends Component {
     timeStamp: "",
     loadingStatus: true,
     children: [],
-    childId: ""
+    childId: "",
+    userId: ""
   };
 
   handleFieldChange = evt => {
     const stateToChange = {};
     stateToChange[evt.target.id] = evt.target.value;
     this.setState(stateToChange);
+    console.log("handleFieldChange")
   };
 
   editMeal = evt => {
-    const storedId = localStorage.getItem("currentUser");
-    evt.preventDefault();
+    const storedId = localStorage.getItem("credentials");
+    // evt.preventDefault();
     this.setState({ loadingStatus: true });
     const editMeal = {
       id: this.props.match.params.mealId,
@@ -43,11 +46,12 @@ class MealEditForm extends Component {
         Comment: meal.Comment,
         timeStamp: new Date(),
         loadingStatus: false,
-        childId: `${meal.child.id}`
+        childId: meal.childId,
+        userId: meal.userId
       });
     });
-    const storedId = localStorage.getItem("currentUser");
-    MealManager.childMeal(storedId).then(childArray => {
+    const storedId = localStorage.getItem("credentials");
+    ChildManager.childUser(storedId).then(childArray => {
       console.log("componentDidMount", childArray);
       this.setState({
        children: childArray
@@ -77,8 +81,8 @@ class MealEditForm extends Component {
             <div className="card-content">
             <select onChange={this.handleFieldChange} id="childId" value={this.state.childId}>
                 <option>Select Child</option>
-                {this.state.children.map(child =>
-                    <option key={child.id} id={child.id} value={child.id}>{child.name}</option>
+                {this.state.children.map(children =>
+                    <option key={children.id} id={children.id} value={children.id}>{children.name}</option>
                   )}
             </select>
          

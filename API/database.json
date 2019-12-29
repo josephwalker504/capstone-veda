@@ -18,56 +18,90 @@
       "FoodPortion": "4pc",
       "Comment": "Zoié wanted Wendy's for breakfast",
       "timeStamp": "2019-12-20T02:12:30.272Z",
-      "userId": null,
-      "childId": 1
-    },
-    {
-      "id": 2,
-      "FoodType": "Cookies",
-      "FoodPortion": "small Famous Amos bag",
-      "Comment": "Kloé's snack for the day",
-      "timeStamp": "2019-12-16T21:52:42.155Z",
       "userId": 1,
       "childId": 1
     },
     {
-      "FoodType": "Pizza",
-      "FoodPortion": "1/2 slice",
-      "Comment": "Zoié really didn't want the pizza, just was just being greedy",
-      "timeStamp": "2019-12-17T00:30:52.849Z",
-      "id": 4,
-      "userId": 2,
+      "id": 2,
+      "FoodType": "Cookie and Ice cream",
+      "FoodPortion": "small Famous Amos bag",
+      "Comment": "Kloé's snack for the day",
+      "timeStamp": "2019-12-20T19:40:13.479Z",
+      "userId": 1,
       "childId": 1
+    },
+    {
+      "id": 3,
+      "FoodType": "Apple Pie",
+      "FoodPortion": "slice",
+      "Comment": "she really liked it",
+      "timeStamp": "2019-12-23T01:31:07.136Z",
+      "userId": 1,
+      "childId": 2
+    },
+    {
+      "FoodType": "Chicken Biscuit",
+      "FoodPortion": "Half of sandwich ",
+      "Comment": "I didn't care for the sandwich",
+      "timeStamp": "2019-12-23T16:29:06.979Z",
+      "userId": 1,
+      "childId": 2,
+      "id": 4
+    },
+    {
+      "FoodType": "sweet cake",
+      "FoodPortion": "2 slices",
+      "Comment": "I gave her a slice and watched her eat it. Went to the bathroom and when I came back she was eating another slice. I don't know who give it to her or how she got another one",
+      "timeStamp": "2019-12-26T15:33:54.448Z",
+      "userId": 1,
+      "childId": 1,
+      "id": 5
+    },
+    {
+      "FoodType": "Chicken",
+      "FoodPortion": "4pc",
+      "Comment": "popeye",
+      "timeStamp": "2019-12-29T20:38:20.040Z",
+      "userId": 1,
+      "childId": 4,
+      "id": 6
     }
   ],
   "children": [
     {
       "id": 1,
       "name": "Zoié",
+      "gender": "females",
       "birthdate": "12.21.16",
-      "gender": "female",
       "userId": 1
     },
     {
       "id": 2,
       "name": "Kloé",
-      "birthdate": "04.25.18",
       "gender": "female",
-      "userId": 2
+      "birthdate": "04.25.18",
+      "userId": 1
     },
     {
+      "id": 3,
       "name": "Joe",
       "gender": "Male",
       "birthdate": "2019-12-18",
-      "userId": 1,
-      "id": 3
+      "userId": 1
     },
     {
       "id": 4,
-      "name": "Jordynn",
+      "name": "Jordynn Walker!!!",
       "gender": "female",
       "birthdate": "2019-05-29",
-      "userId": null
+      "userId": 1
+    },
+    {
+      "id": 5,
+      "name": "dddww",
+      "gender": "femalewwww",
+      "birthdate": "2019-12-10",
+      "userId": 1
     }
   ],
   "pottys": [
@@ -91,17 +125,24 @@
     },
     {
       "action1": false,
-      "action2": "on",
+      "action2": true,
       "comment": "Testing ADD",
       "timeStamp": "2019-12-20T04:55:33.320Z",
       "id": 3
     },
     {
-      "action1": "on",
+      "action1": true,
       "action2": false,
       "comment": "Testing delete",
       "timeStamp": "2019-12-20T04:55:52.703Z",
       "id": 4
+    },
+    {
+      "action1": true,
+      "action2": false,
+      "comment": "I got to Potty",
+      "timeStamp": "2019-12-23T01:48:23.513Z",
+      "id": 5
     }
   ],
   "sleeps": [
@@ -113,23 +154,17 @@
       "userId": 1
     },
     {
-      "id": 2,
-      "childId": 2,
-      "comment": "Nite Nite",
-      "timeStamp": "12.12.19",
-      "userId": 2
-    },
-    {
       "comment": "No time to sleep",
-      "userId": null,
-      "childId": null,
+      "userId": 1,
+      "childId": 1,
       "id": 3
     },
     {
-      "comment": "No time to sleep",
-      "userId": null,
-      "childId": null,
-      "id": 4
+      "id": 4,
+      "comment": "No sleep during capStone",
+      "timeStamp": "2019-12-20T19:11:48.190Z",
+      "userId": 1,
+      "childId": 1
     }
   ],
   "stories": [
