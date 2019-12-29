@@ -34,8 +34,6 @@ class LogIn extends Component {
         localStorage.setItem(
            "credentials",
            JSON.stringify({
-               email: this.state.email,
-               password: this.state.password,
                id: this.state.id
             })
             ) 
