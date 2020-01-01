@@ -30,7 +30,7 @@ export default class PathView extends Component {
           path="/"
           render={props => {
             if (this.isAuthenticated())
-           {return <MealList />;
+           {return <MealList {...props} />;
           } else {
             return <Login setUser={this.props.setUser} {...props} />;
           }
