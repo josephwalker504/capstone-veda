@@ -23,7 +23,7 @@ class ChildForm extends Component {
         if (this.state.name === "" || this.state.gender ==="" || this.state.birthdate === ""){
             window.alert("We Don't Know That Baby");
         } else{
-            const storedId = localStorage.getItem("currentUser");
+            const storedId = localStorage.getItem("credentials");
             console.log("storedId",storedId);
             this.setState({ loadingStatus: true });
             const child = {
