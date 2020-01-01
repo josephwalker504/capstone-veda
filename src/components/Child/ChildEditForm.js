@@ -21,7 +21,7 @@ class ChildEditForm extends Component {
       };
 
       editChild = evt => {
-        const storedId = localStorage.getItem("currentUser");
+        const storedId = localStorage.getItem("credentials");
         evt.preventDefault();
         this.setState({ loadingStatus: true });
         const editChild = {
@@ -44,7 +44,7 @@ class ChildEditForm extends Component {
             // userId: `${child.user.id}`
           });
         });
-    //     const storedId = localStorage.getItem("currentUser");
+    //     const storedId = localStorage.getItem("credentials");
     // ChildManager.childUser(storedId).then(childArray => {
     //   console.log("componentDidMount", childArray);
     //   this.setState({

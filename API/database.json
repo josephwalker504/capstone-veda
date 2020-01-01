@@ -14,23 +14,28 @@
   "meals": [
     {
       "id": 1,
-      "FoodType": "Chicken",
+      "FoodType": "Chicken tenders",
       "FoodPortion": "4pc",
       "Comment": "Zoié wanted Wendy's for breakfast",
+<<<<<<< HEAD
       "timeStamp": "2019-12-20T02:12:30.272Z",
+=======
+      "timeStamp": "2020-01-01T21:51:13.998Z",
+>>>>>>> ffe1d9408ef73610466898c242bd223b4efca71e
       "userId": 1,
       "childId": 1
     },
     {
       "id": 2,
-      "FoodType": "Cookies",
+      "FoodType": "Cookie and Ice cream",
       "FoodPortion": "small Famous Amos bag",
       "Comment": "Kloé's snack for the day",
-      "timeStamp": "2019-12-16T21:52:42.155Z",
+      "timeStamp": "2019-12-20T19:40:13.479Z",
       "userId": 1,
       "childId": 1
     },
     {
+<<<<<<< HEAD
       "id": 4,
       "FoodType": "Pizza",
       "FoodPortion": "1/2 slice",
@@ -63,6 +68,50 @@
       "timeStamp": "2019-12-20T19:51:51.373Z",
       "userId": null,
       "childId": null,
+=======
+      "id": 3,
+      "FoodType": "Apple Pie",
+      "FoodPortion": "slice",
+      "Comment": "she really liked it",
+      "timeStamp": "2019-12-23T01:31:07.136Z",
+      "userId": 1,
+      "childId": 2
+    },
+    {
+      "FoodType": "Chicken Biscuit",
+      "FoodPortion": "Half of sandwich ",
+      "Comment": "I didn't care for the sandwich",
+      "timeStamp": "2019-12-23T16:29:06.979Z",
+      "userId": 1,
+      "childId": 2,
+      "id": 4
+    },
+    {
+      "FoodType": "sweet cake",
+      "FoodPortion": "2 slices",
+      "Comment": "I gave her a slice and watched her eat it. Went to the bathroom and when I came back she was eating another slice. I don't know who give it to her or how she got another one",
+      "timeStamp": "2019-12-26T15:33:54.448Z",
+      "userId": 1,
+      "childId": 1,
+      "id": 5
+    },
+    {
+      "FoodType": "Chicken",
+      "FoodPortion": "4pc",
+      "Comment": "popeye",
+      "timeStamp": "2019-12-29T20:38:20.040Z",
+      "userId": 1,
+      "childId": 4,
+      "id": 6
+    },
+    {
+      "FoodType": "Pizza",
+      "FoodPortion": "1 slice",
+      "Comment": "She really didn't eat the pizza. She waited until I turned around and pushed it on the floor",
+      "timeStamp": "2019-12-30T02:37:48.526Z",
+      "userId": 1,
+      "childId": 2,
+>>>>>>> ffe1d9408ef73610466898c242bd223b4efca71e
       "id": 7
     }
   ],
@@ -70,30 +119,30 @@
     {
       "id": 1,
       "name": "Zoié",
+      "gender": "females",
       "birthdate": "12.21.16",
-      "gender": "female",
       "userId": 1
     },
     {
       "id": 2,
       "name": "Kloé",
-      "birthdate": "04.25.18",
       "gender": "female",
-      "userId": 2
+      "birthdate": "04.25.18",
+      "userId": 1
     },
     {
+      "id": 3,
       "name": "Joe",
       "gender": "Male",
       "birthdate": "2019-12-18",
-      "userId": 1,
-      "id": 3
+      "userId": 1
     },
     {
       "id": 4,
-      "name": "Joié",
+      "name": "Jordynn Walker!!!",
       "gender": "female",
-      "birthdate": "2019-12-19",
-      "userId": null
+      "birthdate": "2019-05-29",
+      "userId": 1
     }
   ],
   "pottys": [
@@ -128,9 +177,16 @@
       "comment": "Testing delete",
       "timeStamp": "2019-12-20T04:55:52.703Z",
       "id": 4
+    },
+    {
+      "action1": true,
+      "action2": false,
+      "comment": "I got to Potty",
+      "timeStamp": "2019-12-23T01:48:23.513Z",
+      "id": 5
     }
   ],
-  "sleep": [
+  "sleeps": [
     {
       "id": 1,
       "childId": 1,
@@ -139,11 +195,17 @@
       "userId": 1
     },
     {
-      "id": 2,
-      "childId": 2,
-      "comment": "Nite Nite",
-      "timeStamp": "12.12.19",
-      "userId": 2
+      "comment": "No time to sleep",
+      "userId": 1,
+      "childId": 1,
+      "id": 3
+    },
+    {
+      "id": 4,
+      "comment": "No sleep during capStone",
+      "timeStamp": "2019-12-20T19:11:48.190Z",
+      "userId": 1,
+      "childId": 1
     }
   ],
   "stories": [
