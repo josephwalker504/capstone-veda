@@ -17,11 +17,7 @@
       "FoodType": "Chicken tenders",
       "FoodPortion": "4pc",
       "Comment": "Zoié wanted Wendy's for breakfast",
-<<<<<<< HEAD
-      "timeStamp": "2019-12-20T02:12:30.272Z",
-=======
       "timeStamp": "2020-01-01T21:51:13.998Z",
->>>>>>> ffe1d9408ef73610466898c242bd223b4efca71e
       "userId": 1,
       "childId": 1
     },
@@ -35,40 +31,6 @@
       "childId": 1
     },
     {
-<<<<<<< HEAD
-      "id": 4,
-      "FoodType": "Pizza",
-      "FoodPortion": "1/2 slice",
-      "Comment": "Zoié really didn't want the pizza, just was just being greedy",
-      "timeStamp": "2019-12-20T16:10:22.266Z",
-      "userId": 1,
-      "childId": 1
-    },
-    {
-      "FoodType": "Chicken",
-      "FoodPortion": "4pc",
-      "Comment": "nnn",
-      "timeStamp": "2019-12-20T19:43:55.428Z",
-      "userId": 1,
-      "childId": 1,
-      "id": 5
-    },
-    {
-      "FoodType": "Chicken",
-      "FoodPortion": "Small Elsa bowl",
-      "Comment": "ddddd",
-      "timeStamp": "2019-12-20T19:47:00.358Z",
-      "userId": 1,
-      "id": 6
-    },
-    {
-      "FoodType": "Chicken",
-      "FoodPortion": "4pc",
-      "Comment": "she liked it\n",
-      "timeStamp": "2019-12-20T19:51:51.373Z",
-      "userId": null,
-      "childId": null,
-=======
       "id": 3,
       "FoodType": "Apple Pie",
       "FoodPortion": "slice",
@@ -111,7 +73,6 @@
       "timeStamp": "2019-12-30T02:37:48.526Z",
       "userId": 1,
       "childId": 2,
->>>>>>> ffe1d9408ef73610466898c242bd223b4efca71e
       "id": 7
     }
   ],
@@ -224,6 +185,14 @@
       "title": "Princess and Frog",
       "comment": "That's my bestie my bestie my bestfriend",
       "userId": 2
+    },
+    {
+      "id": 3,
+      "title": "ABC's Kids Book",
+      "comment": "learning book ",
+      "timeStamp": "2020-01-02T21:56:57.267Z",
+      "userId": 1,
+      "childId": 1
     }
   ]
 }
