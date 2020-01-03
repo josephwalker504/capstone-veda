@@ -51,9 +51,9 @@ class MealForm extends Component {
         if(this.state.FoodType === "" || this.state.FoodPortion === "" || this.state.Comment === "") {
             window.alert("All Fields Required");
         } else {
+            this.setState({ loadingStatus: true });
             const storedId = localStorage.getItem("credentials");
             console.log("storedId",storedId);
-            this.setState({ loadingStatus: true });
             const meal = {
                 FoodType: this.state.FoodType,
                 FoodPortion: this.state.FoodPortion,
@@ -76,6 +76,7 @@ class MealForm extends Component {
 
     render() {
         return(
+            <>
             <div className="card">
                 <div className="card-content">
                     <section>
@@ -113,6 +114,7 @@ class MealForm extends Component {
                 </div>
 
             </div>
+            </>
         )
     }
 
