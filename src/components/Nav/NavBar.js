@@ -6,7 +6,7 @@ class NavBar extends Component {
 
     handleLogout = () => {
         this.props.clearUser();
-        this.props.history.push("/");
+        this.props.history.push('/');
     }
 
 
@@ -35,6 +35,7 @@ class NavBar extends Component {
                     <li>
                         <Link to="/stories">Story</Link>
                     </li>
+                    
                     <li>
                         <Link to="/login" onClick={this.handleLogout}>Log Out</Link>
                     </li>

@@ -42,7 +42,7 @@ componentDidMount() {
     render() {
         return (
            <React.Fragment>
-               <NavBar clearUser={this.clearUser}  />
+               <NavBar user={this.state.user} clearUser={this.clearUser}  />
                <PathView setUser={this.setUser} user={this.user}
                 />
            </React.Fragment>
