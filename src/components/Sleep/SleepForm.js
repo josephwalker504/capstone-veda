@@ -24,7 +24,16 @@ class SleepForm extends Component {
 
     
     componentDidMount() {
-        const storeId = localStorage.getItem("currentUser");
+        SleepManager.get(this.props.match.params.sleepId).then(sleep => {
+            this.setState({
+                timeStamp: new Date(),
+                comment: sleep.comment,
+                loadingStatus: false,
+                userId: sleep.userId,
+                childId: sleep.childId
+            });
+        });
+        const storeId = localStorage.getItem("credentials");
         ChildManager.childUser(storeId).then(childArray => {
             console.log("componentDidMount", childArray);
             this.setState({
@@ -40,7 +49,7 @@ class SleepForm extends Component {
         if(this.state.comment === '') {
             window.alert("Please provide a comment");
         } else {
-            const storedId = localStorage.getItem("setUser");
+            const storedId = localStorage.getItem("credentials");
             console.log("storedId",storedId);
             this.setState({ loadingStatus: true });
             const sleep = {
@@ -50,7 +59,7 @@ class SleepForm extends Component {
                 childId: parseInt(this.state.childId)
             };
             SleepManager.post(sleep)
-            .then(() => this.props.history.push("sleeps"));
+            .then(() => this.props.history.push("/sleeps"));
             console.log("NewSleep")
         }
     }
@@ -61,6 +70,12 @@ class SleepForm extends Component {
             <div className="Sleep-Form">
                 <div>
                     <form>
+                    <label className="select-child">Select Child</label>
+                        <select onChange={this.handleFieldChange} id="childId" value={this.state.childId}>
+                            <option>Select Child</option>
+                            {this.state.children.map(children =>
+                                <option key={children.id} value={children.id}>{children.name}</option>)}
+                        </select>
                         <section>
                             <h2 id="timeStamp">TIME:</h2>
                         </section>

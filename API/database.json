@@ -56,24 +56,6 @@
       "userId": 1,
       "childId": 1,
       "id": 5
-    },
-    {
-      "FoodType": "Chicken",
-      "FoodPortion": "4pc",
-      "Comment": "popeye",
-      "timeStamp": "2019-12-29T20:38:20.040Z",
-      "userId": 1,
-      "childId": 4,
-      "id": 6
-    },
-    {
-      "FoodType": "Pizza",
-      "FoodPortion": "1 slice",
-      "Comment": "She really didn't eat the pizza. She waited until I turned around and pushed it on the floor",
-      "timeStamp": "2019-12-30T02:37:48.526Z",
-      "userId": 1,
-      "childId": 2,
-      "id": 7
     }
   ],
   "children": [
@@ -103,6 +85,20 @@
       "name": "Jordynn Walker!!!",
       "gender": "female",
       "birthdate": "2019-05-29",
+      "userId": 1
+    },
+    {
+      "name": "Johnny Johnny",
+      "gender": "male",
+      "birthdate": "2020-01-07",
+      "userId": 1,
+      "id": 5
+    },
+    {
+      "id": 6,
+      "name": "jo jo",
+      "gender": "male",
+      "birthdate": "2020-01-08",
       "userId": 1
     }
   ],
@@ -150,10 +146,10 @@
   "sleeps": [
     {
       "id": 1,
-      "childId": 1,
-      "comment": "Nap time",
-      "timeStamp": "12.12.19",
-      "userId": 1
+      "comment": "Nap time... shes want to sleep in my bed",
+      "timeStamp": "2020-01-02T22:07:44.279Z",
+      "userId": 1,
+      "childId": 1
     },
     {
       "comment": "No time to sleep",
@@ -162,11 +158,22 @@
       "id": 3
     },
     {
-      "id": 4,
-      "comment": "No sleep during capStone",
-      "timeStamp": "2019-12-20T19:11:48.190Z",
+      "comment": "bed time bath were ",
       "userId": 1,
-      "childId": 1
+      "childId": 3,
+      "id": 4
+    },
+    {
+      "comment": "bed time bath were ",
+      "userId": 1,
+      "childId": 3,
+      "id": 5
+    },
+    {
+      "comment": "bedTime after bath",
+      "userId": 1,
+      "childId": 2,
+      "id": 6
     }
   ],
   "stories": [
@@ -185,14 +192,6 @@
       "title": "Princess and Frog",
       "comment": "That's my bestie my bestie my bestfriend",
       "userId": 2
-    },
-    {
-      "id": 3,
-      "title": "ABC's Kids Book",
-      "comment": "learning book ",
-      "timeStamp": "2020-01-02T21:56:57.267Z",
-      "userId": 1,
-      "childId": 1
     }
   ]
 }
