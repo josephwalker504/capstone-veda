@@ -36,7 +36,7 @@ class NavBar extends Component {
                         <Link to="/stories">Story</Link>
                     </li>
                     <li>
-                        <Link to="/login" onClick={this.handleLogout}>Log Out</Link>
+                        <Link to="/" onClick={this.handleLogout}>Log Out</Link>
                     </li>
                 </ul>
             </nav>
