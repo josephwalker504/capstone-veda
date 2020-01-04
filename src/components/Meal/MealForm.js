@@ -18,18 +18,6 @@ class MealForm extends Component {
         children: []
     };
     componentDidMount() {
-        MealManager.get(this.props.match.params.mealId).then(meal => {
-          console.log("meal", meal);
-          this.setState({
-            FoodType: meal.FoodType,
-            FoodPortion: meal.FoodPortion,
-            Comment: meal.Comment,
-            timeStamp: new Date(),
-            loadingStatus: false,
-            childId: meal.childId,
-            userId: meal.userId
-          });
-        });
         const storedId = localStorage.getItem("credentials");
         ChildManager.childUser(storedId).then(childArray => {
           console.log("componentDidMount", childArray);
@@ -37,7 +25,7 @@ class MealForm extends Component {
            children: childArray
           });
          });
-      }
+        }
 
     handleFieldChange = evt => {
         const stateToChange = {};

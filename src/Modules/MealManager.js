@@ -2,7 +2,7 @@ const baseUrl = "http://localhost:5002"
 
 export default {
     get(id) {
-      return fetch(`${baseUrl}/meals/`).then(result => result.json())
+      return fetch(`${baseUrl}/meals/${id}`).then(result => result.json())
     },
     getAll() {
         return fetch(`${baseUrl}/meals?_expand=child`).then(result => result.json())

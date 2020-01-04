@@ -5,6 +5,7 @@ import React, { Component } from 'react';
 
 class MealSection extends Component {
     render() {
+        console.log("this.props", this.props)
         return(
             <div className="section">
                 <div className="section-body">
