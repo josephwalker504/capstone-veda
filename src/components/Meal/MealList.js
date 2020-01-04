@@ -37,9 +37,9 @@ class MealList extends Component {
         return(
             <>
             <section className="section-content">
-                <button type="button" className="btn" 
+                {/* <button type="button" className="btn" 
                 onClick={() => {this.group.history.push("/meal/new") }}>
-                </button>
+                </button> */}
               
                 <Link to={`/meal/new`}>NEW MEAL</Link>
                 
