@@ -56,6 +56,33 @@
       "userId": 1,
       "childId": 1,
       "id": 5
+    },
+    {
+      "FoodType": "Chicken",
+      "FoodPortion": "4pc",
+      "Comment": "good",
+      "timeStamp": "2020-01-04T20:30:56.643Z",
+      "userId": 2,
+      "childId": 8,
+      "id": 7
+    },
+    {
+      "FoodType": "coffe",
+      "FoodPortion": "2 oz",
+      "Comment": "good",
+      "timeStamp": "2020-01-04T20:42:45.045Z",
+      "userId": 2,
+      "childId": 7,
+      "id": 8
+    },
+    {
+      "FoodType": "Chicken",
+      "FoodPortion": "4pc",
+      "Comment": "ccc",
+      "timeStamp": "2020-01-04T20:57:20.416Z",
+      "userId": 2,
+      "childId": 9,
+      "id": 9
     }
   ],
   "children": [
@@ -78,7 +105,7 @@
       "name": "Joe",
       "gender": "Male",
       "birthdate": "2019-12-18",
-      "userId": 1
+      "userId": 2
     },
     {
       "id": 4,
@@ -100,6 +127,27 @@
       "gender": "male",
       "birthdate": "2020-01-08",
       "userId": 1
+    },
+    {
+      "id": 7,
+      "name": "jon jon",
+      "gender": "male",
+      "birthdate": "2020-01-14",
+      "userId": 2
+    },
+    {
+      "name": "jake",
+      "gender": "male",
+      "birthdate": "2020-01-14",
+      "userId": 2,
+      "id": 8
+    },
+    {
+      "name": "jim",
+      "gender": "bbb",
+      "birthdate": "2020-01-04",
+      "userId": 2,
+      "id": 9
     }
   ],
   "pottys": [

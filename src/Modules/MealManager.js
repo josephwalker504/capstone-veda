@@ -34,7 +34,10 @@ export default {
         }).then(data => data.json())
       },
       childMeal(id) {
-        return fetch(`${baseUrl}/children?userId=${id}`).then(result => result.json())
+        return fetch(`${baseUrl}/meals?userId=${id}&_expand=child`).then(result => result.json())
+      },
+      mealUser(id) {
+        return fetch(`${baseUrl}/meals/${id}?_expand=child`).then(result => result.json())
       }
 
     }

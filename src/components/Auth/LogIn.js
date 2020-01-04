@@ -16,18 +16,17 @@ class LogIn extends Component {
     }
 
     handleLogin = (evt) => {
+        evt.preventDefault()
         UserManager.getAll()
         .then(userArray => {
             userArray.map(users => {
                 
                 if (this.state.email === users.email) {
-                   this.props.setUser({ 
-                       id: users.id
-                   })
+                   this.props.setUser(users.id)
+                   
                 }
             })
         })
-        evt.preventDefault()
         if(this.state.email === "" || this.state.password === "") {
             window.alert("Please Sign In");
         } else {

@@ -13,7 +13,10 @@ class MealList extends Component {
     }
 
     componentDidMount() {
-        MealManager.getAll()
+        console.log("componentDidMount")
+        const storedId = localStorage.getItem("credentials");
+        console.log("storedId",storedId)
+        MealManager.childMeal(storedId)
         .then(mealArray => {
             this.setState({
                 meals: mealArray
@@ -21,9 +24,10 @@ class MealList extends Component {
         })
     };
     deleteMeal = id => {
+        const storedId = localStorage.getItem("credentials");
         MealManager.delete(id)
         .then(() => {
-            MealManager.getAll()
+            MealManager.childMeal(storedId)
             .then((makeNewMeal) => {
                 this.setState({
                     meals: makeNewMeal
