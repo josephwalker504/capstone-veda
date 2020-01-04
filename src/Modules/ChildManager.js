@@ -35,5 +35,8 @@ export default {
   },
   childUser(id) {
     return fetch(`${remoteURL}/children?userId=${id}`).then(result => result.json())
+  },
+  userChild(childId, userId) {
+    return fetch(`${remoteURL}/children/${childId}?userId=${userId}`).then(result => result.json())
   }
 }

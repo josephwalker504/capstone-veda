@@ -14,10 +14,10 @@ class VEDA extends Component {
         user: false,
     }
 
-    isAuthenticated = () =>localStorage.getItem("credentials", 1) !==null
+    isAuthenticated = () =>localStorage.getItem("credentials") !==null
     setUser = (authObj) => {
         localStorage.setItem(
-            "credentials", 1,
+            "credentials",
             JSON.stringify(authObj)
             )
             this.setState({
@@ -28,7 +28,7 @@ class VEDA extends Component {
 
 
 clearUser = () => {
-    localStorage.removeItem("credentials", 1)
+    localStorage.removeItem("credentials")
     this.setState({
         user: this.isAuthenticated()
     })

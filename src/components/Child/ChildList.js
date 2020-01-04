@@ -11,7 +11,8 @@ class ChildList extends Component {
         children: []
     }
     componentDidMount() {
-        ChildManager.getAll()
+        const storedId = localStorage.getItem("credentials");
+        ChildManager.childUser(storedId)
         .then(childArray => {
             this.setState({
                 children: childArray
@@ -20,9 +21,10 @@ class ChildList extends Component {
     }
 
     deleteChild = id => {
+        const storedId = localStorage.getItem("credentials");
         ChildManager.delete(id)
         .then(() => {
-            ChildManager.getAll()
+            ChildManager.childUser(storedId)
             .then((makeChild) => {
                 this.setState({
                     children: makeChild

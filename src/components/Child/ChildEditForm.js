@@ -34,7 +34,8 @@ class ChildEditForm extends Component {
         ChildManager.update(editChild).then(() => this.props.history.push("/children"));
       };
       componentDidMount() {
-        ChildManager.get(this.props.match.params.childId).then(child => {
+        const storedId = localStorage.getItem("credentials");
+        ChildManager.userChild(this.props.match.params.childId,storedId).then(child => {
           console.log("child", child);
           this.setState({
             name: child.name,
@@ -54,9 +55,10 @@ class ChildEditForm extends Component {
   }
 
   deleteMeal = id => {
+    const storedId = localStorage.getItem("credentials");
     ChildManager.delete(id)
     .then(() => {
-        ChildManager.getAll()
+        ChildManager.childUser(storedId)
         .then((makeChild) => {
             this.setState({
                 children: makeChild

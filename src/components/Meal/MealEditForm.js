@@ -38,7 +38,7 @@ class MealEditForm extends Component {
   };
 
   componentDidMount() {
-    MealManager.get(this.props.match.params.mealId).then(meal => {
+    MealManager.mealUser(this.props.match.params.mealId).then(meal => {
       console.log("meal", meal);
       this.setState({
         FoodType: meal.FoodType,
@@ -63,7 +63,7 @@ class MealEditForm extends Component {
   deleteMeal = id => {
     MealManager.delete(id)
     .then(() => {
-        MealManager.getAll()
+        MealManager.childMeal()
         .then((makeNewMeal) => {
             this.setState({
                 meals: makeNewMeal
