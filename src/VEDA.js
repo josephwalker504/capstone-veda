@@ -20,9 +20,7 @@ class VEDA extends Component {
             "credentials",
             JSON.stringify(authObj)
             )
-            this.setState({
-                user:this.isAuthenticated()
-            });
+           
         }
 
 

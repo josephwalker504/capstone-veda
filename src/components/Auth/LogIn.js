@@ -17,19 +17,21 @@ class LogIn extends Component {
 
     handleLogin = (evt) => {
         evt.preventDefault()
-        UserManager.getAll()
-        .then(userArray => {
-            userArray.map(users => {
-                
-                if (this.state.email === users.email) {
-                   this.props.setUser(users.id)
-                   
-                }
-            })
-        })
+       
         if(this.state.email === "" || this.state.password === "") {
             window.alert("Please Sign In");
         } else {
+            UserManager.getAll()
+            .then(userArray => {
+                userArray.map(users => {
+                    
+                    if (this.state.email === users.email || this.state.password) {
+                       this.props.setUser(users.id)
+                       this.props.history.push("/meals");
+                       
+                    }
+                })
+            })
         localStorage.setItem(
            "credentials",
            JSON.stringify({
@@ -38,7 +40,6 @@ class LogIn extends Component {
             ) 
         };
         
-           this.props.history.push("/meals");
     }
 
     render() {
