@@ -32,6 +32,9 @@ export default {
           },
           body: JSON.stringify(editPotty)
         }).then(data => data.json())
+      },
+      pottyUser(id) {
+        return fetch(`${baseUrl}/pottys?userId=${id}`).then(result => result.json())
       }
 
     }

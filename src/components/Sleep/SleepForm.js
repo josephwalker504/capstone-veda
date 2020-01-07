@@ -24,15 +24,15 @@ class SleepForm extends Component {
 
     
     componentDidMount() {
-        SleepManager.get(this.props.match.params.sleepId).then(sleep => {
-            this.setState({
-                timeStamp: new Date(),
-                comment: sleep.comment,
-                loadingStatus: false,
-                userId: sleep.userId,
-                childId: sleep.childId
-            });
-        });
+        // SleepManager.get(this.props.match.params.sleepId).then(sleep => {
+        //     this.setState({
+        //         timeStamp: new Date(),
+        //         comment: sleep.comment,
+        //         loadingStatus: false,
+        //         userId: sleep.userId,
+        //         childId: sleep.childId
+        //     });
+        // });
         const storeId = localStorage.getItem("credentials");
         ChildManager.childUser(storeId).then(childArray => {
             console.log("componentDidMount", childArray);

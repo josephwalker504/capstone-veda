@@ -31,5 +31,8 @@ export default {
       },
       body: JSON.stringify(editStory)
     }).then(data => data.json())
-  }
+  },
+  storyUser(id) {
+    return fetch(`${remoteURL}/stories?userId=${id}`).then(result => result.json())
+  },
 }

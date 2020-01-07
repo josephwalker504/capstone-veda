@@ -24,20 +24,21 @@ class LogIn extends Component {
             UserManager.getAll()
             .then(userArray => {
                 userArray.map(users => {
-                    
-                    if (this.state.email === users.email || this.state.password) {
+                    if (this.state.email === users.email && this.state.password) 
+                    {
+                        console.log("user",users, this.state)
                        this.props.setUser(users.id)
                        this.props.history.push("/meals");
                        
                     }
                 })
             })
-        localStorage.setItem(
-           "credentials",
-           JSON.stringify({
-               id: this.state.id
-            })
-            ) 
+        // localStorage.setItem(
+        //    "credentials",
+        //    JSON.stringify({
+        //        id: this.state.id
+        //     })
+        //     ) 
         };
         
     }

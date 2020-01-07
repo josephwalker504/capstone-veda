@@ -9,6 +9,11 @@
       "id": 2,
       "email": "ZKJ@walker.com",
       "password": "4321"
+    },
+    {
+      "id": 3,
+      "email": "jisie@me.com",
+      "password": "1111"
     }
   ],
   "meals": [
@@ -26,9 +31,9 @@
       "FoodType": "Cookie and Ice cream",
       "FoodPortion": "small Famous Amos bag",
       "Comment": "Kloé's snack for the day",
-      "timeStamp": "2019-12-20T19:40:13.479Z",
+      "timeStamp": "2020-01-06T20:41:50.222Z",
       "userId": 1,
-      "childId": 1
+      "childId": 12
     },
     {
       "id": 3,
@@ -76,13 +81,22 @@
       "id": 8
     },
     {
+      "id": 9,
       "FoodType": "Chicken",
       "FoodPortion": "4pc",
-      "Comment": "ccc",
-      "timeStamp": "2020-01-04T20:57:20.416Z",
+      "Comment": "ckkknbnbj",
+      "timeStamp": "2020-01-06T17:39:54.150Z",
       "userId": 2,
-      "childId": 9,
-      "id": 9
+      "childId": 9
+    },
+    {
+      "FoodType": "Chicken",
+      "FoodPortion": "4pc",
+      "Comment": "www",
+      "timeStamp": "2020-01-06T20:16:43.723Z",
+      "userId": 3,
+      "childId": 11,
+      "id": 10
     }
   ],
   "children": [
@@ -148,17 +162,36 @@
       "birthdate": "2020-01-04",
       "userId": 2,
       "id": 9
+    },
+    {
+      "name": "bobby blue",
+      "gender": "male",
+      "birthdate": "2020-01-06",
+      "userId": 2,
+      "id": 10
+    },
+    {
+      "name": "jisie",
+      "gender": "female",
+      "birthdate": "2020-01-01",
+      "userId": 3,
+      "id": 11
+    },
+    {
+      "name": "frfr",
+      "gender": "mae",
+      "birthdate": "2020-01-06",
+      "userId": 1,
+      "id": 12
     }
   ],
   "pottys": [
     {
-      "id": 1,
-      "action1": true,
-      "action2": false,
       "comment": "Just a wet diaper",
-      "timeStamp": "12.12.19",
-      "chidId": 2,
-      "userId": 1
+      "action1": false,
+      "action2": false,
+      "timeStamp": "2020-01-06T19:27:50.663Z",
+      "id": 1
     },
     {
       "id": 2,
@@ -189,6 +222,34 @@
       "comment": "I got to Potty",
       "timeStamp": "2019-12-23T01:48:23.513Z",
       "id": 5
+    },
+    {
+      "action1": true,
+      "action2": false,
+      "comment": "jisie",
+      "timeStamp": "2020-01-06T20:15:34.831Z",
+      "id": 6
+    },
+    {
+      "action1": false,
+      "action2": true,
+      "comment": "potty",
+      "timeStamp": "2020-01-06T20:16:04.789Z",
+      "id": 7
+    },
+    {
+      "action1": true,
+      "action2": false,
+      "comment": "fffff",
+      "timeStamp": "2020-01-06T20:21:41.226Z",
+      "id": 8
+    },
+    {
+      "action1": true,
+      "action2": false,
+      "comment": "potty time",
+      "timeStamp": "2020-01-06T20:25:29.993Z",
+      "id": 9
     }
   ],
   "sleeps": [
@@ -207,14 +268,14 @@
     },
     {
       "comment": "bed time bath were ",
-      "userId": 1,
+      "userId": 2,
       "childId": 3,
       "id": 4
     },
     {
-      "comment": "bed time bath were ",
-      "userId": 1,
-      "childId": 3,
+      "comment": "nap",
+      "userId": 3,
+      "childId": 11,
       "id": 5
     }
   ],

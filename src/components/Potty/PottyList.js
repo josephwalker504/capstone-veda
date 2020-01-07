@@ -12,7 +12,8 @@ class PottyList extends Component {
     }
 
     componentDidMount() {
-        PottyManager.getAll()
+        const storedId = localStorage.getItem("credentials");
+        PottyManager.pottyUser(storedId)
         .then(pottyArray => {
             this.setState({
                 pottys: pottyArray
@@ -22,10 +23,11 @@ class PottyList extends Component {
     deletePotty = id => {
         PottyManager.delete(id)
         .then(() => {
-            PottyManager.getAll()
+            const storedId = localStorage.getItem("credentials");
+            PottyManager.pottyUser(storedId)
             .then((NewPotty) =>
             this.setState({
-                potty: NewPotty
+                pottys: NewPotty
             }))
         })
     }
