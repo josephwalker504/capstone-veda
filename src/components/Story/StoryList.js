@@ -12,7 +12,8 @@ class StoryList extends Component {
         }
 
         componentDidMount() {
-            StoryManager.getAll()
+            const storedId = localStorage.getItem("credentials");
+            StoryManager.storyUser(storedId)
             .then(storyArray => {
                 this.setState({
                     stories: storyArray
@@ -23,7 +24,8 @@ class StoryList extends Component {
         deleteStory = id => {
             StoryManager.delete(id)
             .then(() => {
-                StoryManager.getAll()
+                const storedId = localStorage.getItem("credentials");
+                StoryManager.storyUser(storedId)
                 .then((makeNewStory) => {
                     this.setState({
                         stories: makeNewStory

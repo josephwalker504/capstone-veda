@@ -18,17 +18,17 @@ class StoryForm extends Component {
     };
 
     componentDidMount() {
-        StoryManager.get(this.props.match.params.storyId).then(story => {
-            console.log("story", story);
-            this.setState({
-                userId: story.userId,
-                childId: story.childId,
-                title: story.title,
-                comment: story.comment,
-                timeStamp: new Date(),
-                loadingStatus: false
-            });
-        });
+        // StoryManager.get(this.props.match.params.storyId).then(story => {
+        //     console.log("story", story);
+        //     this.setState({
+        //         userId: story.userId,
+        //         childId: story.childId,
+        //         title: story.title,
+        //         comment: story.comment,
+        //         timeStamp: new Date(),
+        //         loadingStatus: false
+        //     });
+        // });
         const storedId = localStorage.getItem("credentials");
         ChildManager.childUser(storedId).then(childArray => {
           console.log("componentDidMount", childArray);

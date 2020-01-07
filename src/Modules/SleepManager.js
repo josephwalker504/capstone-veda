@@ -32,6 +32,9 @@ export default {
           },
           body: JSON.stringify(editSleep)
         }).then(data => data.json())
+      },
+      sleepUser(id) {
+        return fetch(`${baseUrl}/sleeps?userId=${id}`).then(result => result.json())
       }
 
     }

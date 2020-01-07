@@ -13,32 +13,44 @@ class PottyEditForm extends Component {
         const stateToChange = {};
         stateToChange[evt.target.id] = evt.target.value;
         this.setState(stateToChange);
+        console.log("evt.target.value",evt.target.value)
     };
 
     editPotty = evt => {
-        evt.preventDefault();
+        // evt.preventDefault();
         this.setState({ loadingStatus: true });
         const editPotty = {
             comment: this.state.comment,
-            action1: this.state.action1,
-            action2: this.state.action2,
-            timeStamp: this.state.timeStamp
+            action1: this.state.action1 ==="true",
+            action2: this.state.action2 ==="true",
+            timeStamp: this.state.timeStamp,
+            id: this.props.match.params.pottyId
         };
         PottyManager.update(editPotty).then(() => this.props.history.push("/pottys"));
     };
     componentDidMount() {
-        PottyManager.get(this.props.match.parama.pottyId).then(potty => {
+        PottyManager.get(this.props.match.params.pottyId).then(potty => {
             console.log("potty",potty);
             this.setState({
                 comment: potty.comment,
                 action1: potty.action1,
                 action2: potty.action2,
-                timeStamp: new Date.now(),
+                timeStamp: new Date(),
                 loadingStatus: false
             });
         });
     }
-
+    deleteMeal = id => {
+        PottyManager.delete(id)
+        .then(() => {
+            PottyManager.getAll()
+            .then((NewPotty) => {
+                this.setState({
+                    pottys: NewPotty
+                })
+            })
+        })
+    }
 
    
 
@@ -53,19 +65,19 @@ class PottyEditForm extends Component {
                     <div className="card-content">
                         <form>
                             <section>
-                                <input type="checkbox" id="action1" onChange={this.handleFeildChange}></input>
+                                <input type="checkbox" id="action1" onChange={this.handleFieldChange} value={this.state.action1}></input>
                                 <label className="action1-label">Tinkle</label>
                             </section>
                             <section>
-                                <input type="checkbox" id="action2" onChange={this.handleFeildChange}></input>
+                                <input type="checkbox" id="action2" onChange={this.handleFieldChange} value={this.state.action2}></input>
                                 <label className="action2-labe">Boo Boo</label>
                             </section>
                             <section>
-                                <textarea type="text"  id="comment" onChange={this.handleFeildChange}></textarea>
+                                <input type="text"  id="comment" onChange={this.handleFieldChange} value={this.state.comment}></input>
                                 <label className="comment-label">Comments</label>
                             </section>
                             <div className="potty-btn">
-                                <button type="button" onClick={this.NewPotty}>Potty</button>
+                                <button type="button" onClick={this.editPotty}>Potty</button>
                             </div>
                         </form>
                     </div>

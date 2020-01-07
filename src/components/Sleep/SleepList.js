@@ -13,7 +13,8 @@ class SleepList extends Component {
     }
 
     componentDidMount() {
-        SleepManager.getAll()
+        const storedId = localStorage.getItem("credentials");
+        SleepManager.sleepUser(storedId)
         .then(sleepArray => {
             this.setState({
                 sleeps: sleepArray
@@ -22,12 +23,13 @@ class SleepList extends Component {
     }
 
     deleteSleep = id => {
+        const storedId = localStorage.getItem("credentials");
         SleepManager.delete(id)
         .then(() => {
-            SleepManager.getAll()
+            SleepManager.sleepUser(storedId)
             .then((NewSleep) =>
             this.setState({
-                sleep: NewSleep
+                sleeps: NewSleep
             }))
         })
     }

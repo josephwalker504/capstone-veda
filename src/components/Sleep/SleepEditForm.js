@@ -22,7 +22,7 @@ class SleepEditForm extends Component {
     };
 
     editSleep = evt => {
-        const storedId = localStorage.getItem("currentUser");
+        const storedId = localStorage.getItem("credentials");
         evt.preventDefault();
         this.setState({ loadingStatus: true });
         const editSleep = {
@@ -42,10 +42,11 @@ class SleepEditForm extends Component {
             comment: sleep.comment,
             timeStamp: new Date(),
             loadingStatus: false,
-            // childId: `${sleep.child.id}`
+            childId: sleep.childId
+        
           });
         });
-        const storedId = localStorage.getItem("currentUser");
+        const storedId = localStorage.getItem("credentials");
         ChildManager.childUser(storedId).then(childArray => {
           console.log("componentDidMount", childArray);
           this.setState({
